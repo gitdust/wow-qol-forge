@@ -6,7 +6,7 @@ dist/
 dist-ssr/
 
 # Local database & environment
-data/
+/data/
 .env
 .env.*
 
