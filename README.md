@@ -1,12 +1,12 @@
 <div align="center">
   <img src="public/logo-256.png" alt="WoW QoL Forge Logo" width="112" />
   <h1>WoW QoL Forge</h1>
-  <p>A client-side, zero-bloat custom Quality-of-Life (QoL) addon builder for <strong>World of Warcraft Retail</strong> — live at <a href="https://wow-qol-forge.com/"><strong>wow-qol-forge.com</strong></a>.</p>
+  <p>A client-side, zero-bloat custom Quality-of-Life (QoL) addon builder for <strong>World of Warcraft Retail</strong>
 </div>
 
 Instead of installing a dozen separate addons or heavy UI frameworks just to get a handful of everyday conveniences, **WoW QoL Forge** lets you cherry-pick individual QoL features like building blocks, configure default options in the browser, preview the generated Lua source, and download a clean, ready-to-install `.zip` addon in one click.
 
-- **Target WoW Client**: Retail **12.1.5** (`## Interface: 120105, 120107`)
+- **Target WoW Client**: Retail
 - **Included Modules**: **78** standalone modules across **10** categories + **4** curated presets
 - **Zero Dependencies**: Pure Blizzard native Lua APIs — no Ace3, LibDataBroker, or embedded libraries
 
