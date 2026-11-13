@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Production & SSR builds
+dist/
+dist-ssr/
+
+# Local database & environment
+data/
+.env
+.env.*
+
+# Logs & OS files
+*.log
+.DS_Store
+
+# Cloudflare Pages / Wrangler
+.wrangler/
+
+# Optional local reference addons
+.references/

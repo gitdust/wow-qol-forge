@@ -1,0 +1,45 @@
+{
+  "name": "wow-qol-forge",
+  "version": "1.3.1",
+  "description": "A client-side custom Quality-of-Life (QoL) addon builder for World of Warcraft Retail",
+  "license": "MIT",
+  "author": "iCH4O",
+  "homepage": "https://wow-qol-forge.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitdust/wow-qol-forge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gitdust/wow-qol-forge/issues"
+  },
+  "packageManager": "pnpm@9.15.5",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && vite build --config vite.ssr.config.ts && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "test": "node scripts/verify-modules.mjs && node scripts/check-i18n.mjs --strict"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "file-saver": "^2.0.5",
+    "jszip": "^3.10.2",
+    "lucide-react": "^1.57.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.30",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wow-qol-forge.com/sitemap.xml
