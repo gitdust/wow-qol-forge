@@ -2,12 +2,12 @@ import { ModuleTranslation } from '../../types';
 
 export const chatZhCN: Record<string, ModuleTranslation> = {
   'chat-arrow-keys': {
-    title: '方向键畅快光标移动 (无需按 Alt)',
+    title: '用方向键移动聊天光标 (无需按 Alt)',
     description: '在输入框打字修改文本时，直接使用键盘方向键左右移动光标，无需反人类地按住 Alt 键。',
     details: '魔兽原生设置下按方向键会翻动历史聊天，本功能让方向键回归正常光标导航，大幅改善打字聊天体验。',
     tag: '打字神器',
     comments: {
-      header: '[ 聊天框方向键畅快光标移动 (无需按 Alt) ]',
+      header: '[ 聊天框用方向键移动聊天光标 (无需按 Alt) ]',
       coverNote: '覆盖全部聊天框以及之后打开的临时密语窗口 (与 Leatrix Plus 一致)',
     },
   },
@@ -71,7 +71,7 @@ export const chatZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'chat-unclamp': {
-    title: '聊天框解除屏幕边缘吸附',
+    title: '解除聊天框的屏幕边缘限制',
     description: '允许将聊天框自由拖拽至屏幕的最边缘甚至贴紧屏幕边界，不再被暴雪原生边距限制。',
     tag: '布局自由',
     comments: {

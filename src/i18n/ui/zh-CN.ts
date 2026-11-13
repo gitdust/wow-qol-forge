@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const zhCN: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - 魔兽世界极简定制插件工坊',
-    description:
-      '魔兽世界正式服纯前端定制 QoL 插件生成器。将每一个实用功能拆成独立积木，随心勾选，零冗余，一键打包生成专属轻量插件！',
-    ogTitle: 'WoW QoL Forge - 魔兽世界极简定制插件工坊',
-    ogDescription:
-      '魔兽世界正式服 QoL 插件生成器。{count} 个功能模块随心勾选，零冗余，一键生成专属轻量插件！',
+    heading: '魔兽世界正式服插件生成器',
+    description: '从 {count} 个便捷功能中选择自动修理、快速拾取等模块，自定义设置、预览 Lua 源码，并下载可直接安装的插件 ZIP 包。',
     ogImageAlt: 'WoW QoL Forge 模块装配立方图标',
     siteSubtitle: '魔兽极简插件工坊',
     gameType: '正式服',
@@ -58,7 +54,7 @@ export const zhCN: UiDictionary = {
     charsCount: '{count} 字符',
     addonNameError: '插件名不能为空，且只允许输入英文字母 (A-Z, a-z)',
     emptyTitle: '暂无勾选功能',
-    emptyDesc: '在左侧列表中勾选你需要的生活质量功能，此处将实时展示并提供专属参数设置。',
+    emptyDesc: '在左侧列表中勾选你需要的便捷功能，此处将实时展示并提供专属参数设置。',
     expandOptions: '展开参数配置',
     collapseOptions: '收起参数配置',
     optionsButton: '参数',
@@ -70,7 +66,6 @@ export const zhCN: UiDictionary = {
   },
   floating: {
     buttonTitle: '点击展开已选功能清单、调整参数并打包下载',
-    buttonLabel: '已选配置与下载',
   },
   codeModal: {
     subtitle: '零冗余、无框架依赖的现代魔兽正式服纯净代码',
@@ -155,7 +150,7 @@ export const zhCN: UiDictionary = {
     invalidAddonName: '请输入纯英文字母插件名（例如 MyQol）',
     selectOneModule: '请至少勾选一个功能模块',
     downloadFailed: '打包生成失败，请重试',
-    defaultAddonNotes: '为魔兽世界正式服打造的定制化极简生活质量插件，纯前端零冗余生成',
+    defaultAddonNotes: '为魔兽世界正式服打造的定制的轻量便捷插件，纯前端零冗余生成',
   },
   categories: {
     all: {

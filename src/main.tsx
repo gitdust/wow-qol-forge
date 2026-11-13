@@ -4,7 +4,6 @@ import { App } from './App';
 import {
   DEFAULT_LOCALE,
   getStoredLocale,
-  getUi,
   loadLocaleBundle,
   Locale,
   LOCALE_CONFIGS,
@@ -41,7 +40,6 @@ async function bootstrap() {
 
   await loadLocaleBundle(locale);
   document.documentElement.lang = LOCALE_CONFIGS[locale].htmlLang;
-  document.title = getUi(locale).seo.title;
 
   const tree = (
     <React.StrictMode>

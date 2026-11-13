@@ -41,14 +41,14 @@ export const lootingEn: Record<string, ModuleTranslation> = {
   'loot-spec-by-boss': {
     title: 'Auto Loot Spec by Boss or Instance',
     description:
-      'Automatically switches your loot specialization at encounter start using rules like "Nexus-Princess=Frost", and restores your original spec on unlisted bosses or when leaving an instance.',
+      'Switches your loot specialization at the start of a boss encounter. Restores your previous loot specialization for encounters with no matching rule or when you leave the instance.',
     details:
       'Rules accept boss name, instance name, or encounter ID (boss rules override instance rules). Use "current" to follow your active spec. Original spec is remembered per session.',
     tag: 'Raid Helper',
     options: {
       rules: {
         label: 'Switch rules',
-        description: 'Format "BossOrInstance=Spec", separated by commas or semicolons, e.g. Nexus-Princess=Frost, Forge=Fire',
+        description: 'Use "BossNameOrEncounterID=Spec" or "InstanceName=Spec". Enter names as shown in your game client and separate rules with commas or semicolons.',
       },
       announce: { label: 'Announce switches in chat' },
     },

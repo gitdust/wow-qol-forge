@@ -52,9 +52,9 @@ export const Navbar: React.FC<NavbarProps> = ({ view, onNavigate }) => {
             title={ui.nav.backToModules}
           >
             <Logo className="w-6 h-6 flex-shrink-0 drop-shadow-[0_0_8px_rgba(245,158,11,0.45)]" />
-            <h1 className="font-bold text-base text-white tracking-tight whitespace-nowrap m-0 inline-flex items-center">
+            <span className="font-bold text-base text-white tracking-tight whitespace-nowrap m-0 inline-flex items-center">
               <span className="text-amber-400">WoW</span>&nbsp;QoL Forge
-            </h1>
+            </span>
           </button>
           <span className="text-xs text-slate-400 hidden md:inline truncate">
             {ui.seo.siteSubtitle}

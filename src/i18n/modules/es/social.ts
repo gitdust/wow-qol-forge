@@ -123,9 +123,9 @@ export const socialEs: Record<string, ModuleTranslation> = {
     },
   },
   'lfg-double-click-signup': {
-    title: 'Doble clic para apuntarse en Grupos ya creados',
+    title: 'Doble clic para apuntarse a grupos ya creados',
     description: 'Haz doble clic sobre cualquier grupo de la lista de búsqueda para apuntarte al instante.',
-    details: 'Omite el cuadro de diálogo si ya elegiste tus funciones; Shift+Doble clic abre el diálogo igualmente.',
+    details: 'Omite el cuadro de diálogo si ya elegiste tus funciones; un doble clic con Mayús abre el diálogo igualmente.',
     tag: 'Cola rápida',
     options: {
       skipDialog: {
@@ -134,7 +134,7 @@ export const socialEs: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ Doble clic para apuntarse en Grupos ya creados ]',
+      header: '[ Doble clic para apuntarse a grupos ya creados ]',
       skipNote: 'Enviar automáticamente si el botón Apuntarse está activo y no se pulsa Shift',
     },
   },

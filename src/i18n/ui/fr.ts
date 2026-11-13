@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const fr: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Générateur d’addons minimalistes pour WoW Retail',
-    description:
-      'Générateur d’addons QoL sur mesure pour World of Warcraft Retail, 100 % côté navigateur. Choisissez uniquement les modules utiles, sans superflu, et téléchargez votre ZIP.',
-    ogTitle: 'WoW QoL Forge - Générateur d’addons minimalistes pour WoW Retail',
-    ogDescription:
-      'Générateur d’addons QoL pour WoW Retail. Combinez {count} modules légers sans superflu et téléchargez votre addon sur mesure.',
+    heading: 'Générateur d’addons pour World of Warcraft Retail',
+    description: 'Choisissez parmi {count} modules de confort, dont la réparation automatique et le ramassage rapide du butin. Réglez les options, prévisualisez le Lua et téléchargez votre addon en ZIP.',
     ogImageAlt: 'Icône modulaire WoW QoL Forge',
     siteSubtitle: 'Atelier d’addons minimalistes',
     gameType: 'Retail',
@@ -24,9 +20,9 @@ export const fr: UiDictionary = {
     selectedCount: 'Sélectionnés : {selected} / {total}',
     searchPlaceholder: 'Rechercher un module ou une description...',
     clearSearch: 'Effacer la recherche',
-    selectAllCurrent: 'Tout sélectionner',
-    unselectAllCurrent: 'Tout désélectionner',
-    tableHeaderModule: 'Modules & Détails',
+    selectAllCurrent: 'Sélectionner les modules visibles',
+    unselectAllCurrent: 'Désélectionner les modules visibles',
+    tableHeaderModule: 'Modules et détails',
     tableHeaderAction: 'Actions',
     emptyTitle: 'Aucun module correspondant',
     emptyHint: 'Essayez une autre catégorie ou videz le champ de recherche',
@@ -45,7 +41,7 @@ export const fr: UiDictionary = {
     sourceButtonTitle: 'Voir le code Lua autonome',
   },
   drawer: {
-    title: 'Modules sélectionnés & Config',
+    title: 'Modules sélectionnés et réglages',
     itemCount: '{count} choisis',
     defaultsHintPrefix: 'Ces réglages sont des valeurs par défaut. Tapez',
     defaultsHintSuffix: 'en jeu pour activer/désactiver les modules et ajuster les options',
@@ -53,7 +49,7 @@ export const fr: UiDictionary = {
     clearAllTitle: 'Désélectionner tous les modules',
     closeDrawer: 'Fermer le panneau',
     addonNameLabel: 'Nom du dossier de l’addon',
-    addonNameHint: '(Lettres anglaises uniquement, sans limite)',
+    addonNameHint: '(Lettres de A à Z uniquement, sans limite)',
     addonNameDefault: 'Par défaut : {name}',
     charsCount: '{count} car.',
     addonNameError: 'Le nom ne peut pas être vide et ne doit contenir que des lettres (A-Z, a-z)',
@@ -71,7 +67,6 @@ export const fr: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Ouvrir la sélection pour configurer et télécharger',
-    buttonLabel: 'Configurer & Télécharger',
   },
   codeModal: {
     subtitle: 'Code Lua pur et sans dépendance pour WoW Retail moderne',
@@ -179,7 +174,7 @@ export const fr: UiDictionary = {
     wowUiSourceLabel: 'WoW UI Source (GitHub)',
   },
   alerts: {
-    invalidAddonName: 'Veuillez saisir un nom composé uniquement de lettres anglaises (ex. MyQol)',
+    invalidAddonName: 'Veuillez saisir un nom composé uniquement de lettres de A à Z (p. ex. : MyQol)',
     selectOneModule: 'Veuillez sélectionner au moins un module',
     downloadFailed: 'Échec de la création du ZIP, veuillez réessayer',
     defaultAddonNotes:
@@ -258,7 +253,7 @@ export const fr: UiDictionary = {
     luaHeaderTargetInterface: 'Interface cible',
     luaHeaderSelectedModules: 'Modules sélectionnés',
     luaHeaderNote:
-      'Note : Les valeurs web sont des défauts. Tapez /{slash} en jeu pour activer/désactiver les modules.',
+      'Note : Les réglages du site servent de valeurs par défaut. Tapez /{slash} en jeu pour activer/désactiver les modules.',
     commentErrorReport: 'Rapport d’erreurs (n’afficher chaque erreur unique qu’une fois)',
     runtimeErrorPrint: 'Module ',
     commentEventBus:
@@ -301,7 +296,7 @@ export const fr: UiDictionary = {
       needsReloadComment:
         'Activer ou désactiver un module nécessite un rechargement de l’interface',
       needsReloadStatus: '|cffff8040Certains changements nécessitent de recharger l’UI|r',
-      setValueComment: 'Enregistrer aussitôt et notifier le module actif si un rappel existe',
+      setValueComment: 'Enregistrer aussitôt et notifier le module actif si un callback est enregistré',
       optionLineComment: 'Ligne d’option : case / nombre / texte / menu déroulant',
       needsReloadTag: ' |cff888888(Recharger)|r',
       rowComment: 'Ligne de module : case + titre + description + flèche d’options',

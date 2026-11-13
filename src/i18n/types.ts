@@ -12,10 +12,8 @@ export interface ChangelogTranslationEntry {
 
 export interface UiDictionary {
   seo: {
-    title: string;
+    heading: string;
     description: string;
-    ogTitle: string;
-    ogDescription: string;
     ogImageAlt: string;
     siteSubtitle: string;
     gameType: string;
@@ -78,7 +76,6 @@ export interface UiDictionary {
   };
   floating: {
     buttonTitle: string;
-    buttonLabel: string;
   };
   codeModal: {
     subtitle: string;

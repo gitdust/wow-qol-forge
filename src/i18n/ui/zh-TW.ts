@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const zhTW: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - 魔獸世界極簡客製化插件工坊',
-    description:
-      '魔獸世界正式版純前端客製化 QoL 插件產生器。將每個實用功能拆成獨立積木，自由勾選、零冗餘，一鍵打包產生專屬輕量插件！',
-    ogTitle: 'WoW QoL Forge - 魔獸世界極簡客製化插件工坊',
-    ogDescription:
-      '魔獸世界正式版 QoL 插件產生器。{count} 個功能模組自由勾選，零冗餘，一鍵產生專屬輕量插件！',
+    heading: '魔獸世界正式版插件產生器',
+    description: '從 {count} 個便利功能中選擇自動修理、快速拾取等模組，自訂設定、預覽 Lua 原始碼，並下載可直接安裝的插件 ZIP 檔。',
     ogImageAlt: 'WoW QoL Forge 模組裝配立方圖示',
     siteSubtitle: '魔獸極簡插件工坊',
     gameType: '正式版',
@@ -58,7 +54,7 @@ export const zhTW: UiDictionary = {
     charsCount: '{count} 字元',
     addonNameError: '插件名稱不可為空，且僅允許輸入英文字母 (A-Z, a-z)',
     emptyTitle: '尚未勾選任何功能',
-    emptyDesc: '請在左側列表中勾選需要的生活品質功能，此處將即時顯示並提供專屬參數設定。',
+    emptyDesc: '請在左側列表中勾選需要的便利功能，此處將即時顯示並提供專屬參數設定。',
     expandOptions: '展開參數設定',
     collapseOptions: '收合參數設定',
     optionsButton: '參數',
@@ -70,7 +66,6 @@ export const zhTW: UiDictionary = {
   },
   floating: {
     buttonTitle: '點擊展開已選功能清單、調整參數並打包下載',
-    buttonLabel: '已選設定與下載',
   },
   codeModal: {
     subtitle: '零冗餘、無框架相依的現代魔獸正式版純淨程式碼',
@@ -110,7 +105,7 @@ export const zhTW: UiDictionary = {
       '1.2.0': {
         groups: [
           { type: 'added', items: ['遊戲內設定面板（/插件名稱）', '自動確認職責、自動放鑰石等 25 項功能'] },
-          { type: 'improved', items: ['裝綁/戰團綁定標記', '原生視窗任意空白處拖曳與記憶位置'] },
+          { type: 'improved', items: ['裝綁/戰隊綁定標記', '原生視窗任意空白處拖曳與記憶位置'] },
           { type: 'removed', items: ['下架雕紋隱藏、聊天視窗滾輪翻頁'] },
         ],
       },
@@ -155,7 +150,7 @@ export const zhTW: UiDictionary = {
     invalidAddonName: '請輸入純英文字母的插件名稱（例如 MyQol）',
     selectOneModule: '請至少勾選一個功能模組',
     downloadFailed: '打包產生失敗，請重試',
-    defaultAddonNotes: '為魔獸世界正式版打造的客製化極簡生活品質插件，純前端零冗餘產生',
+    defaultAddonNotes: '為魔獸世界正式版打造的客製化輕量便利插件，純前端零冗餘產生',
   },
   categories: {
     all: {

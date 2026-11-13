@@ -28,6 +28,7 @@ const {
   allModules,
   DEFAULT_LOCALE,
   LOCALE_LIST,
+  localePath,
   formatMsg,
   getUi,
   loadLocaleBundle,
@@ -55,22 +56,30 @@ const escapeText = (str) =>
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 
-const hreflangBlock = [
-  ...LOCALE_LIST.map(
-    (item) =>
-      `    <link rel="alternate" hreflang="${item.hreflang}" href="${SITE_ORIGIN}/${item.slug}/" />`
-  ),
-  `    <link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}/${DEFAULT_LOCALE}/" />`,
-].join('\n');
+const alternates = [
+  ...LOCALE_LIST.map((item) => [item.hreflang, localePath(item.code, SITE_ORIGIN)]),
+  ['x-default', localePath(DEFAULT_LOCALE, SITE_ORIGIN)],
+];
+
+function alternateLinks(tag) {
+  return alternates
+    .map(([language, url]) => `    <${tag} rel="alternate" hreflang="${language}" href="${url}" />`)
+    .join('\n');
+}
+
+const hreflangBlock = alternateLinks('link');
+const sitemapAlternates = alternateLinks('xhtml:link');
 
 function buildLocalizedHtml(baseTemplate, localeInfo, appHtml) {
   const ui = getUi(localeInfo.code);
   const count = allModules.length;
-  const pageUrl = `${SITE_ORIGIN}/${localeInfo.slug}/`;
-  const title = ui.seo.title;
+  const pageUrl = localePath(localeInfo.code, SITE_ORIGIN);
+  const title = `${ui.seo.heading} | WoW QoL Forge`;
   const desc = formatMsg(ui.seo.description, { count });
-  const ogTitle = ui.seo.ogTitle;
-  const ogDesc = formatMsg(ui.seo.ogDescription, { count });
+  const ogAlternates = LOCALE_LIST
+    .filter((item) => item.code !== localeInfo.code)
+    .map((item) => `    <meta property="og:locale:alternate" content="${item.ogLocale}" />`)
+    .join('\n');
 
   const jsonLd = JSON.stringify({
     '@context': 'https://schema.org',
@@ -80,6 +89,8 @@ function buildLocalizedHtml(baseTemplate, localeInfo, appHtml) {
     inLanguage: localeInfo.htmlLang,
     description: desc,
     applicationCategory: 'GameApplication',
+    image: `${SITE_ORIGIN}/logo-256.png`,
+    browserRequirements: 'Requires JavaScript',
     operatingSystem: 'Windows, macOS',
     offers: {
       '@type': 'Offer',
@@ -101,15 +112,15 @@ function buildLocalizedHtml(baseTemplate, localeInfo, appHtml) {
     )
     .replace(
       /<meta property="og:locale" content="[^"]*"\s*\/>/,
-      `<meta property="og:locale" content="${localeInfo.ogLocale}" />`
+      `<meta property="og:locale" content="${localeInfo.ogLocale}" />\n${ogAlternates}`
     )
     .replace(
       /<meta property="og:title" content="[^"]*"\s*\/>/,
-      `<meta property="og:title" content="${escapeAttr(ogTitle)}" />`
+      `<meta property="og:title" content="${escapeAttr(title)}" />`
     )
     .replace(
       /<meta property="og:description" content="[^"]*"\s*\/>/,
-      `<meta property="og:description" content="${escapeAttr(ogDesc)}" />`
+      `<meta property="og:description" content="${escapeAttr(desc)}" />`
     )
     .replace(
       /<meta property="og:url" content="[^"]*"\s*\/>/,
@@ -120,18 +131,22 @@ function buildLocalizedHtml(baseTemplate, localeInfo, appHtml) {
       `<meta property="og:image:alt" content="${escapeAttr(ui.seo.ogImageAlt)}" />`
     )
     .replace(
+      /<meta name="twitter:image:alt" content="[^"]*"\s*\/>/,
+      `<meta name="twitter:image:alt" content="${escapeAttr(ui.seo.ogImageAlt)}" />`
+    )
+    .replace(
       /<meta name="twitter:title" content="[^"]*"\s*\/>/,
-      `<meta name="twitter:title" content="${escapeAttr(ogTitle)}" />`
+      `<meta name="twitter:title" content="${escapeAttr(title)}" />`
     )
     .replace(
       /<meta name="twitter:description" content="[^"]*"\s*\/>/,
-      `<meta name="twitter:description" content="${escapeAttr(ogDesc)}" />`
+      `<meta name="twitter:description" content="${escapeAttr(desc)}" />`
     )
     .replace(
       '</head>',
       `    <script type="application/ld+json">${jsonLd}</script>\n  </head>`
     )
-    .replace(MOUNT_POINT, `<div id="root">${appHtml}</div>`);
+    .replace(MOUNT_POINT, () => `<div id="root">${appHtml}</div>`);
 
   return html;
 }
@@ -161,16 +176,9 @@ for (const localeInfo of LOCALE_LIST) {
 }
 
 // 生成多语言 sitemap.xml
-const sitemapUrls = LOCALE_LIST.map((item) => {
-  const alternates = [
-    ...LOCALE_LIST.map(
-      (alt) =>
-        `    <xhtml:link rel="alternate" hreflang="${alt.hreflang}" href="${SITE_ORIGIN}/${alt.slug}/" />`
-    ),
-    `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_ORIGIN}/${DEFAULT_LOCALE}/" />`,
-  ].join('\n');
-  return `  <url>\n    <loc>${SITE_ORIGIN}/${item.slug}/</loc>\n${alternates}\n    <changefreq>weekly</changefreq>\n    <priority>1.0</priority>\n  </url>`;
-}).join('\n');
+const sitemapUrls = LOCALE_LIST.map((item) =>
+  `  <url>\n    <loc>${localePath(item.code, SITE_ORIGIN)}</loc>\n${sitemapAlternates}\n  </url>`
+).join('\n');
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

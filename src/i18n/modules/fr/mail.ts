@@ -3,7 +3,7 @@ import { ModuleTranslation } from '../../types';
 export const mailFr: Record<string, ModuleTranslation> = {
   'postal-open-all': {
     title: 'Tout ouvrir au courrier (Open All)',
-    description: 'Ajoute un bouton « Tout ouvrir » à la boîte aux lettres pour récupérer automatiquement or et pièces jointes.',
+    description: 'Ajoute un bouton « Tout ouvrir » à la boîte aux lettres pour récupérer automatiquement l’or et les pièces jointes.',
     details: 'Issu de Postal : s’arrête proprement si les sacs sont pleins, affiche le bilan d’or et peut être interrompu à tout moment.',
     tag: 'Indispensable',
     options: {
@@ -60,7 +60,7 @@ export const mailFr: Record<string, ModuleTranslation> = {
     options: {
       fillSubject: {
         label: 'Remplir l’objet avec le montant',
-        description: 'Inscrit automatiquement le montant envoyé dans un objet vide',
+        description: 'Inscrit automatiquement le montant envoyé si le champ Objet est vide',
       },
     },
     comments: {

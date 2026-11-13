@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useMemo } from 'react';
 import { AddonMetadata, Category, QoLModule } from './types';
 import { allModules, categories, defaultPresets, moduleMap } from './data/modules';
 import { Navbar, SiteView } from './components/Navbar';
@@ -7,9 +7,10 @@ import { ModuleRow } from './components/ModuleRow';
 import { CodeModal } from './components/CodeModal';
 import { SelectedDrawer } from './components/SelectedDrawer';
 import { Footer } from './components/Footer';
+import { FloatingSelectionButton } from './components/FloatingSelectionButton';
 import { useDownloadCounts } from './hooks/useDownloadCounts';
 import { DynamicIcon } from './components/DynamicIcon';
-import { Search, X, SlidersHorizontal } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import {
   generateAddonCode,
   packageAndDownloadZip,
@@ -113,7 +114,7 @@ const AppInner: React.FC = () => {
   useEffect(() => {
     document.documentElement.lang = LOCALE_CONFIGS[locale].htmlLang;
     document.title =
-      view === 'changelog' ? `${ui.changelog.title} - WoW QoL Forge` : ui.seo.title;
+      view === 'changelog' ? `${ui.changelog.title} - WoW QoL Forge` : `${ui.seo.heading} | WoW QoL Forge`;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
@@ -137,10 +138,6 @@ const AppInner: React.FC = () => {
 
   // Floating drawer state (closed by default; do NOT auto-open on check)
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
-
-  // Floating button ref and bouncing animation state
-  const floatingButtonRef = useRef<HTMLButtonElement>(null);
-  const [isButtonBouncing, setIsButtonBouncing] = useState<boolean>(false);
 
   // Modals state
   const [isDownloading, setIsDownloading] = useState(false);
@@ -231,87 +228,7 @@ const AppInner: React.FC = () => {
     return filteredModules.filter((m) => selectedModules.includes(m.id)).length;
   }, [filteredModules, selectedModules]);
 
-  // Parabolic fly-to-button trajectory animation
-  const triggerParabolicFly = (startX: number, startY: number) => {
-    const targetRect = floatingButtonRef.current?.getBoundingClientRect();
-    const targetX = targetRect ? targetRect.left + targetRect.width / 2 : window.innerWidth - 80;
-    const targetY = targetRect ? targetRect.top + targetRect.height / 2 : window.innerHeight - 80;
-
-    // Create flying particle DOM element
-    const particle = document.createElement('div');
-    particle.className =
-      'fixed pointer-events-none z-50 flex items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-500 text-slate-950 font-black shadow-[0_0_16px_rgba(245,158,11,0.9)] border border-amber-300';
-    particle.style.width = '24px';
-    particle.style.height = '24px';
-    particle.style.position = 'fixed';
-    particle.style.left = '0px';
-    particle.style.top = '0px';
-    particle.style.willChange = 'transform, opacity';
-    particle.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
-
-    document.body.appendChild(particle);
-
-    // Parabola apex control point (swoops upward)
-    const ctrlX = (startX + targetX) / 2;
-    const ctrlY = Math.max(20, Math.min(startY, targetY) - 120);
-
-    const duration = 520;
-    const startTime = performance.now();
-
-    const animate = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(1, elapsed / duration);
-
-      // Quadratic Bezier formula: B(t) = (1-t)^2 P0 + 2(1-t)t P1 + t^2 P2
-      const t = progress;
-      const oneMinusT = 1 - t;
-      const curX =
-        oneMinusT * oneMinusT * (startX - 12) +
-        2 * oneMinusT * t * (ctrlX - 12) +
-        t * t * (targetX - 12);
-      const curY =
-        oneMinusT * oneMinusT * (startY - 12) +
-        2 * oneMinusT * t * (ctrlY - 12) +
-        t * t * (targetY - 12);
-
-      const scale = 1.1 - t * 0.45;
-      const opacity = t > 0.85 ? (1 - t) / 0.15 : 1;
-
-      particle.style.transform = `translate3d(${curX}px, ${curY}px, 0) scale(${scale})`;
-      particle.style.opacity = `${opacity}`;
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        particle.remove();
-        // Trigger lively bounce on the floating button
-        setIsButtonBouncing(true);
-        setTimeout(() => setIsButtonBouncing(false), 280);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  };
-
-  // Toggle single module: do NOT open drawer, trigger parabolic animation when checking
-  const handleToggleModule = (id: string, e?: React.MouseEvent | React.ChangeEvent) => {
-    const isAlreadySelected = selectedModules.includes(id);
-
-    if (!isAlreadySelected) {
-      let startX = window.innerWidth / 2;
-      let startY = window.innerHeight / 2;
-
-      if (e && 'clientX' in e && (e as React.MouseEvent).clientX > 0) {
-        startX = (e as React.MouseEvent).clientX;
-        startY = (e as React.MouseEvent).clientY;
-      } else if (e && e.target && 'getBoundingClientRect' in (e.target as HTMLElement)) {
-        const rect = (e.target as HTMLElement).getBoundingClientRect();
-        startX = rect.left + rect.width / 2;
-        startY = rect.top + rect.height / 2;
-      }
-      triggerParabolicFly(startX, startY);
-    }
-
+  const handleToggleModule = (id: string) => {
     setSelectedModules((prev) =>
       prev.includes(id) ? prev.filter((m) => m !== id) : [...prev, id]
     );
@@ -442,6 +359,12 @@ const AppInner: React.FC = () => {
       ) : (
         /* Main Content Area */
         <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-8 py-6 space-y-5">
+          <div className="space-y-1">
+            <h1 className="text-lg font-bold text-white">{ui.seo.heading}</h1>
+            <p className="text-xs leading-relaxed text-slate-400">
+              {f(ui.seo.description, { count: allModules.length })}
+            </p>
+          </div>
           {/* Category Horizontal Navigation Tabs */}
           <div className="bg-[#10141d] border border-slate-800 rounded-xl p-2.5 shadow-lg space-y-2">
             <div className="flex flex-wrap items-center gap-1.5">
@@ -595,26 +518,12 @@ const AppInner: React.FC = () => {
         isDownloading={isDownloading}
       />
 
-      {/* Floating Bottom-Right Pill Button (Target for Parabolic Animation & Drawer Toggle) */}
-      {!isDrawerOpen && view === 'modules' && (
-        <button
-          type="button"
-          ref={floatingButtonRef}
-          onClick={() => setIsDrawerOpen(true)}
-          className={`fixed bottom-6 right-6 z-40 flex items-center gap-2.5 px-4 py-3 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-bold text-xs rounded-full shadow-2xl shadow-amber-500/30 active:scale-95 transition-all duration-200 cursor-pointer ${
-            isButtonBouncing
-              ? 'scale-115 ring-4 ring-amber-400/60 shadow-[0_0_30px_rgba(245,158,11,0.9)]'
-              : 'scale-100 hover:scale-105'
-          }`}
-          title={ui.floating.buttonTitle}
-        >
-          <SlidersHorizontal size={16} />
-          <span>{ui.floating.buttonLabel}</span>
-          <span className="bg-slate-950 text-amber-400 font-mono text-[11px] px-2 py-0.5 rounded-full font-bold">
-            {selectedModules.length}
-          </span>
-        </button>
-      )}
+      <FloatingSelectionButton
+        count={selectedModules.length}
+        label={`${ui.floating.buttonTitle} (${f(ui.drawer.selectedLabel, { count: selectedModules.length })})`}
+        visible={!isDrawerOpen && view === 'modules'}
+        onOpen={() => setIsDrawerOpen(true)}
+      />
 
       {/* Code Viewer Modal */}
       <CodeModal

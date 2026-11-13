@@ -27,7 +27,7 @@ export const chatDe: Record<string, ModuleTranslation> = {
   },
   'chat-short-channels': {
     title: 'Chat-Kanalnamen verkürzen',
-    description: 'Kürzt lange Präfixe wie [1. Allgemein - Dornogal] auf [A] sowie Gilde, Gruppe und Schlachtzug.',
+    description: 'Kürzt lange Kanalpräfixe wie [1. Allgemein - Dornogal] auf [A]. Auch die Präfixe für Gilde, Gruppe und Schlachtzug werden gekürzt.',
     details: 'Nutzt Blizzards lokalisierte Kanalnamen; eigene Kanäle behalten nur ihre Nummer.',
     tag: 'Sauberes UI',
     comments: {

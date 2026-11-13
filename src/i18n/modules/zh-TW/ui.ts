@@ -85,11 +85,11 @@ export const uiZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'show-ready-timer': {
-    title: '地城就位確認倒數計時',
-    description: '在地城/團隊搜尋器的就位確認視窗下方顯示倒數進度條，清楚掌握還剩多少時間進本。戰場/競技場倒數由「排本確認安全保護」提供。',
+    title: '地城與團隊搜尋器入場倒數',
+    description: '在地城搜尋器或團隊搜尋器的入場確認視窗下方顯示倒數進度條，顯示接受邀請的剩餘時間。戰場/競技場倒數由「PvP 排隊確認保護」提供。',
     tag: '實用貼心',
     comments: {
-      header: '[ 地城/團隊就位確認倒數計時 (Leatrix Plus ShowReadyTimer) ]',
+      header: '[ 地城與團隊搜尋器入場倒數 (Leatrix Plus ShowReadyTimer) ]',
     },
   },
   'blizz-move': {

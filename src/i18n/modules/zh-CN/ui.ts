@@ -85,11 +85,11 @@ export const uiZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'show-ready-timer': {
-    title: '地下城就位确认倒计时',
-    description: '在地下城/团队查找器的就位确认窗口下方显示倒计时进度条，清楚掌握还剩多少时间进本。战场/竞技场倒计时由「排本确认安全保护」提供。',
+    title: '地下城与团队查找器入场倒计时',
+    description: '在地下城查找器或团队查找器的入场确认窗口下方显示倒计时进度条，清楚掌握还剩多少时间进本。战场/竞技场倒计时由「PvP 排队确认保护」提供。',
     tag: '实用贴心',
     comments: {
-      header: '[ 地下城/团队就位确认倒计时 (Leatrix Plus ShowReadyTimer) ]',
+      header: '[ 地下城与团队查找器入场倒计时 (Leatrix Plus ShowReadyTimer) ]',
     },
   },
   'blizz-move': {

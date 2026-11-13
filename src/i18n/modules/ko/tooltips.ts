@@ -39,7 +39,7 @@ export const tooltipsKo: Record<string, ModuleTranslation> = {
   },
   'transmog-status': {
     title: '형상변환 수집 여부 표시',
-    description: '방어구나 무기에 마우스를 올리면 해당 외형이 전투부대 형상변환에 수집되었는지 툴팁 하단에 표시합니다.',
+    description: '방어구나 무기에 마우스를 올리면 해당 외형이 전투부대의 외형 수집품에 포함되어 있는지 툴팁 하단에 표시합니다.',
     tag: '수집가 필수',
     comments: {
       header: '[ 형상변환 수집 여부 표시 (Can I Mog It 경량판) ]',

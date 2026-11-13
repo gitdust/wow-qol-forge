@@ -122,8 +122,8 @@ export const systemFr: Record<string, ModuleTranslation> = {
     },
   },
   'great-vault-reminder': {
-    title: 'Rappel de récompense de la Grande chambre forte',
-    description: 'Vous rappelle une fois par connexion dans le chat (et au centre de l’écran en option) si une récompense vous attend.',
+    title: 'Rappel de récompense de la grande chambre-forte',
+    description: 'Si une récompense vous attend dans la grande chambre-forte, affiche un rappel dans le chat à la connexion ou au rechargement de l’interface. Le rappel peut aussi s’afficher au centre de l’écran.',
     details: 'Alerte dès la connexion au lieu d’attendre l’ouverture du panneau Mythique+.',
     tag: 'Hebdo',
     options: {
@@ -134,12 +134,12 @@ export const systemFr: Record<string, ModuleTranslation> = {
       playSound: { label: 'Jouer un son de rappel' },
     },
     comments: {
-      header: '[ Rappel de récompense de la Grande chambre forte ]',
-      skipShownNote: 'Ignorer si la fenêtre de la Grande chambre forte est déjà ouverte',
+      header: '[ Rappel de récompense de la grande chambre-forte ]',
+      skipShownNote: 'Ignorer si la fenêtre de la grande chambre-forte est déjà ouverte',
       delayNote: 'Les données hebdomadaires arrivent peu après la connexion ; revérifier à la mise à jour',
     },
     strings: {
-      reminderMsg: 'Des récompenses vous attendent dans la Grande chambre forte !',
+      reminderMsg: 'Des récompenses vous attendent dans la grande chambre-forte !',
     },
   },
 };

@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const ru: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Конструктор минималистичных аддонов для Retail WoW',
-    description:
-      'Браузерный генератор QoL-аддонов для World of Warcraft Retail. Выбирайте только нужные модули без лишнего кода и скачивайте готовый ZIP-архив в один клик.',
-    ogTitle: 'WoW QoL Forge - Конструктор минималистичных аддонов для Retail WoW',
-    ogDescription:
-      'Генератор QoL-аддонов для актуального WoW. Выбирайте из {count} модулей без лишнего балласта и соберите свой лёгкий аддон.',
+    heading: 'Конструктор аддонов для World of Warcraft Retail',
+    description: 'Выберите нужные функции из {count} модулей, включая авторемонт и быстрый сбор добычи. Настройте их, просмотрите код Lua и скачайте готовый ZIP-архив.',
     ogImageAlt: 'Иконка WoW QoL Forge',
     siteSubtitle: 'Конструктор минималистичных аддонов',
     gameType: 'Актуальная (Retail)',
@@ -26,7 +22,7 @@ export const ru: UiDictionary = {
     clearSearch: 'Очистить поиск',
     selectAllCurrent: 'Выбрать все видимые',
     unselectAllCurrent: 'Снять выделение со всех видимых',
-    tableHeaderModule: 'Модули и описание',
+    tableHeaderModule: 'Модули и описания',
     tableHeaderAction: 'Действия',
     emptyTitle: 'Подходящие модули не найдены',
     emptyHint: 'Попробуйте выбрать другую категорию или очистить поиск',
@@ -38,7 +34,7 @@ export const ru: UiDictionary = {
     downloadsTitle: 'Всего скачиваний: {count}',
     optionsButton: 'Опции',
     optionsPreviewTitle: '{title} · Предпросмотр опций',
-    optionsReadonlyHint: 'Только просмотр · Отметьте модуль для настройки в боковой панели',
+    optionsReadonlyHint: 'Только просмотр · Отметьте модуль, чтобы настроить его в боковой панели',
     optionOn: 'Вкл',
     optionOff: 'Выкл',
     sourceButton: 'Код',
@@ -71,7 +67,6 @@ export const ru: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Открыть список выбранных модулей для настройки и скачивания',
-    buttonLabel: 'Сборка и загрузка',
   },
   codeModal: {
     subtitle: 'Чистый Lua-код для актуального WoW без лишних зависимостей',

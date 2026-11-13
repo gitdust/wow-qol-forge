@@ -44,7 +44,7 @@ export const mailPt: Record<string, ModuleTranslation> = {
   },
   'postal-trade-block': {
     title: 'Bloquear trocas na caixa de correio',
-    description: 'Recusa automaticamente pedidos de troca enquanto sua caixa de correio estiver aberta e restaura depois.',
+    description: 'Recusa automaticamente pedidos de troca enquanto sua caixa de correio estiver aberta e restaura a configuração anterior ao fechar a caixa de correio.',
     details: 'Evita interrupções ao organizar ouro e correio em capitais movimentadas.',
     tag: 'Antispam',
     comments: {

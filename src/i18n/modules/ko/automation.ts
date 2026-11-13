@@ -175,13 +175,13 @@ export const automationKo: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: '쐐기돌 마력의 샘 자동 삽입',
+    title: '쐐기돌 자동 삽입',
     description: '인스턴스 입구의 마력의 샘을 열면 가방에서 현재 던전에 맞는 쐐기돌을 자동으로 넣어줍니다.',
     details: '이미 삽입되어 있거나 전투 중일 때는 동작하지 않습니다.',
     tag: '쐐기돌',
     comments: {
-      header: '[ 쐐기돌 마력의 샘 자동 삽입 ]',
-      openDelayNote: 'UI가 완전히 열린 뒤 삽입해야 어픽스와 쐐기돌 아이콘이 정상 갱신됨',
+      header: '[ 쐐기돌 자동 삽입 ]',
+      openDelayNote: 'UI가 완전히 열린 뒤 삽입해야 속성와 쐐기돌 아이콘이 정상 갱신됨',
       clearCursorNote: '삽입 실패 시 커서에 쐐기돌이 남지 않도록 정리',
     },
   },

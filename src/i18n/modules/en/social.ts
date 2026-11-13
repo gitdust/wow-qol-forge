@@ -22,8 +22,8 @@ export const socialEn: Record<string, ModuleTranslation> = {
   },
   'invite-from-whisper': {
     title: 'Auto Invite by Whisper Keyword',
-    description: 'Automatically invites anyone who whispers a specific keyword (such as "111" or "inv") when you are solo or group leader/assist.',
-    details: 'Handy for guild raids, world bosses, or Mythic+ group forming without typing invites manually.',
+    description: 'Automatically invites anyone who whispers a specific keyword (such as "111" or "inv") when you are solo, the group leader, or a raid assistant.',
+    details: 'Handy when forming groups for guild raids, world bosses, or Mythic+ without typing invites manually.',
     tag: 'Group Lead',
     options: {
       keyword: { label: 'Whisper invite keyword' },

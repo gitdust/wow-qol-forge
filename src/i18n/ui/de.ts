@@ -2,13 +2,9 @@ import { UiDictionary } from '../types';
 
 export const de: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Minimalistischer Retail-WoW-Addon-Baukasten',
-    description:
-      'Clientseitiger QoL-Addon-Generator für World of Warcraft Retail. Wähle gezielt einzelne Module ohne Ballast und lade dein schlankes Addon als ZIP herunter.',
-    ogTitle: 'WoW QoL Forge - Minimalistischer Retail-WoW-Addon-Baukasten',
-    ogDescription:
-      'Individueller QoL-Addon-Generator für Retail WoW. Kombiniere {count} schlanke Module ohne Ballast zu deinem eigenen Addon.',
-    ogImageAlt: 'WoW QoL Forge Modulares Würfelsymbol',
+    heading: 'Addon-Baukasten für World of Warcraft Retail',
+    description: 'Wähle aus {count} Komfortmodulen wie automatischer Reparatur und schnellerem Plündern. Passe die Einstellungen an, prüfe den Lua-Code und lade dein Addon als ZIP herunter.',
+    ogImageAlt: 'Modulares Würfelsymbol von WoW QoL Forge',
     siteSubtitle: 'Minimalistischer Addon-Baukasten',
     gameType: 'Retail',
   },
@@ -53,7 +49,7 @@ export const de: UiDictionary = {
     clearAllTitle: 'Alle ausgewählten Module entfernen',
     closeDrawer: 'Panel schließen',
     addonNameLabel: 'Addon-Ordnername',
-    addonNameHint: '(Nur englische Buchstaben, beliebige Länge)',
+    addonNameHint: '(Nur Buchstaben von A bis Z, beliebige Länge)',
     addonNameDefault: 'Standard: {name}',
     charsCount: '{count} Zeichen',
     addonNameError: 'Der Addon-Name darf nicht leer sein und nur Buchstaben (A-Z, a-z) enthalten',
@@ -71,12 +67,11 @@ export const de: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Ausgewählte Module öffnen, konfigurieren und herunterladen',
-    buttonLabel: 'Konfigurieren & Laden',
   },
   codeModal: {
     subtitle: 'Schlanker, abhängigkeitsfreier Lua-Code für modernes Retail WoW',
     copyFile: 'Datei kopieren',
-    copied: 'In Zwischenablage kopiert',
+    copied: 'In die Zwischenablage kopiert',
     close: 'Schließen',
     lineCount: 'Zeilen: {count}',
     closeWindow: 'Fenster schließen',
@@ -179,7 +174,7 @@ export const de: UiDictionary = {
     wowUiSourceLabel: 'WoW UI Source (GitHub)',
   },
   alerts: {
-    invalidAddonName: 'Bitte gib einen Addon-Namen nur aus englischen Buchstaben ein (z. B. MyQol)',
+    invalidAddonName: 'Bitte gib einen Addon-Namen nur aus Buchstaben von A bis Z ein (z. B. MyQol)',
     selectOneModule: 'Bitte wähle mindestens ein Modul aus',
     downloadFailed: 'Paket konnte nicht erstellt werden, bitte erneut versuchen',
     defaultAddonNotes:

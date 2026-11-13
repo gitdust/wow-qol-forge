@@ -58,7 +58,7 @@ export const socialRu: Record<string, ModuleTranslation> = {
     },
   },
   'block-social-requests': {
-    title: 'Отклонение запросов в друзья B.net и гильдию',
+    title: 'Отклонение запросов в друзья Battle.net и приглашений в гильдию',
     description: 'Автоматически отклоняет входящие запросы в друзья Battle.net и чужие приглашения в гильдию (кроме друзей) с отчётом в чат.',
     details: 'Приглашения в гильдию от друзей не отклоняются. Обе опции настраиваются отдельно.',
     tag: 'Без спама',
@@ -67,7 +67,7 @@ export const socialRu: Record<string, ModuleTranslation> = {
       guildInvites: { label: 'Отклонять приглашения в гильдию (кроме друзей)' },
     },
     comments: {
-      header: '[ Отклонение запросов в друзья B.net и гильдию ]',
+      header: '[ Отклонение запросов в друзья Battle.net и приглашений в гильдию ]',
       guildPopupNote: 'Скрыть окно после показа; OnHide вызовет DeclineGuild',
     },
     strings: {
@@ -124,7 +124,7 @@ export const socialRu: Record<string, ModuleTranslation> = {
   },
   'lfg-double-click-signup': {
     title: 'Запись в группу двойным кликом',
-    description: 'Двойной клик по группе в поиске заранее собранных групп сразу отправляет заявку.',
+    description: 'Дважды щёлкните по объявлению в списке заранее собранных групп, чтобы подать заявку.',
     details: 'Пропускает диалог заявки, если роли уже выбраны; Shift+двойной клик открывает окно как обычно.',
     tag: 'Быстрая очередь',
     options: {

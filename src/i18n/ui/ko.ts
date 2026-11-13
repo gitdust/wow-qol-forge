@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const ko: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - 월드 오브 워크래프트 맞춤형 미니멀 애드온 빌더',
-    description:
-      '월드 오브 워크래프트 본섭용 브라우저 기반 맞춤형 QoL 애드온 생성기. 필요한 기능만 골라 불필요한 코드 없이 가벼운 애드온 ZIP을 한 번에 다운로드하세요.',
-    ogTitle: 'WoW QoL Forge - 월드 오브 워크래프트 맞춤형 미니멀 애드온 빌더',
-    ogDescription:
-      '본섭용 맞춤형 QoL 애드온 생성기. {count}개의 기능 모듈 중 원하는 것만 선택해 나만의 경량 애드온을 만드세요.',
+    heading: '월드 오브 워크래프트 본섭 애드온 제작 도구',
+    description: '자동 수리, 빠른 전리품 획득 등 {count}개 편의 기능 중 필요한 모듈을 고르세요. 옵션을 설정하고 Lua 코드를 미리 본 뒤 설치용 ZIP 파일을 다운로드할 수 있습니다.',
     ogImageAlt: 'WoW QoL Forge 모듈 큐브 아이콘',
     siteSubtitle: '미니멀 애드온 공방',
     gameType: '본섭',
@@ -38,7 +34,7 @@ export const ko: UiDictionary = {
     downloadsTitle: '누적 다운로드 {count}회',
     optionsButton: '옵션',
     optionsPreviewTitle: '{title} · 옵션 미리보기',
-    optionsReadonlyHint: '읽기 전용 미리보기 · 모듈을 선택하면 오른쪽 서랍에서 수정할 수 있습니다',
+    optionsReadonlyHint: '읽기 전용 미리보기 · 모듈을 선택하면 오른쪽 패널에서 수정할 수 있습니다',
     optionOn: '켬',
     optionOff: '끔',
     sourceButton: '소스',
@@ -70,7 +66,6 @@ export const ko: UiDictionary = {
   },
   floating: {
     buttonTitle: '선택한 모듈 목록을 열어 설정하고 다운로드',
-    buttonLabel: '선택 구성 및 다운로드',
   },
   codeModal: {
     subtitle: '불필요한 코드나 외부 라이브러리 없는 최신 본섭용 순수 Lua 코드',
@@ -152,7 +147,7 @@ export const ko: UiDictionary = {
   },
   alerts: {
     invalidAddonName: '영문자로만 이루어진 애드온 이름을 입력하세요 (예: MyQol)',
-    selectOneModule: '최소 1개 이상의 기능 모듈을 선택하세요',
+    selectOneModule: '기능 모듈을 하나 이상 선택하세요',
     downloadFailed: '패키지 생성에 실패했습니다. 다시 시도해 주세요',
     defaultAddonNotes: '월드 오브 워크래프트 본섭용 맞춤형 미니멀 편의 기능 애드온',
   },
@@ -224,7 +219,7 @@ export const ko: UiDictionary = {
     luaHeaderGeneratedBy: 'WoW QoL Forge로 생성됨',
     luaHeaderTargetInterface: '대상 Interface 버전',
     luaHeaderSelectedModules: '선택된 모듈 수',
-    luaHeaderNote: '안내: 웹에서 설정한 값은 기본값입니다. 게임 내에서 /{slash} 를 입력해 모듈과 옵션을 변경할 수 있습니다.',
+    luaHeaderNote: '안내: 웹에서 설정한 값은 기본값입니다. 게임 내에서 /{slash} 명령을 입력해 모듈과 옵션을 변경할 수 있습니다.',
     commentErrorReport: '오류 보고 (채팅 도배 방지를 위해 동일 오류는 1회만 출력)',
     runtimeErrorPrint: '모듈 ',
     commentEventBus: '경량 이벤트 버스 (단일 Frame으로 모든 이벤트를 처리하여 오염과 중복 비용 제거)',

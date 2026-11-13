@@ -123,9 +123,9 @@ export const socialPt: Record<string, ModuleTranslation> = {
     },
   },
   'lfg-double-click-signup': {
-    title: 'Duplo clique para inscrever-se em Grupos Prontos',
-    description: 'Dê duplo clique em qualquer grupo na lista de busca de Grupos Prontos para se inscrever direto.',
-    details: 'Pula o diálogo caso suas funções já estejam marcadas; Shift+Duplo clique abre o diálogo normalmente.',
+    title: 'Clique duplo para se inscrever em Grupos Prontos',
+    description: 'Clique duas vezes em qualquer grupo na lista de busca de Grupos Prontos para se inscrever diretamente.',
+    details: 'Pula o diálogo caso suas funções já estejam marcadas; clique duplo com Shift abre o diálogo normalmente.',
     tag: 'Fila rápida',
     options: {
       skipDialog: {
@@ -134,7 +134,7 @@ export const socialPt: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ Duplo clique para inscrever-se em Grupos Prontos ]',
+      header: '[ Clique duplo para se inscrever em Grupos Prontos ]',
       skipNote: 'Enviar automaticamente quando SignUpButton estiver ativo sem Shift',
     },
   },

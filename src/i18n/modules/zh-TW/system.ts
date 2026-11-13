@@ -62,14 +62,14 @@ export const systemZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'flash-taskbar': {
-    title: '排本就位背景強提醒',
+    title: '排隊與就位確認的工作列提醒',
     description:
       '切窗到背景看影片或網頁時，一旦地城/團隊就緒、戰場進組、戰鬥復活或被召喚，自動閃爍 Windows 工作列並發出響鈴；收到密語時也可閃爍工作列。',
     tag: '切窗必備',
     options: {
       playSound: {
         label: '同時播放提示音',
-        description: '在工作列閃爍時，透過主聲道播放高穿透力就位音效',
+        description: '在工作列閃爍時，透過主聲道播放就位確認提示音',
       },
       flashOnWhisper: {
         label: '收到密語時也閃爍工作列',
@@ -77,7 +77,7 @@ export const systemZhTW: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 排本就位背景強提醒 (FlashTaskBar) ]',
+      header: '[ 排隊與就位確認的工作列提醒 (FlashTaskBar) ]',
       whisperNote: '密語：只看事件是否觸發，不讀取訊息內容 (副本內訊息內容對插件不可讀)',
       readyCheckNote: '團隊就位確認 / 隨機副本就位 / 戰鬥復活 / 召喚',
       battlefieldNote: '戰場 / 競技場進入確認',

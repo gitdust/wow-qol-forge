@@ -102,7 +102,7 @@ export const automationPt: Record<string, ModuleTranslation> = {
     },
   },
   'auto-release-pvp': {
-    title: 'Liberar espírito automático em CB e JxJ aberto',
+    title: 'Liberar o espírito automaticamente em campos de batalha e no JxJ ao ar livre',
     description: 'Libera o espírito automaticamente ao morrer em campos de batalha e zonas JxJ abertas (Invérnia, Tol Barad, Ashran).',
     details: 'Pula se houver Pedra da Alma ou Reencarnação; segure Shift para cancelar.',
     tag: 'Auxílio JxJ',
@@ -175,12 +175,12 @@ export const automationPt: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: 'Inserir pedra-chave Mítica+ automaticamente',
+    title: 'Inserir Pedra-chave Mítica automaticamente',
     description: 'Coloca automaticamente a pedra-chave correspondente das suas bolsas ao abrir a Fonte de Poder.',
     details: 'Ignora em combate ou se já houver pedra inserida.',
     tag: 'Mítica+',
     comments: {
-      header: '[ Inserir pedra-chave Mítica+ automaticamente ]',
+      header: '[ Inserir Pedra-chave Mítica automaticamente ]',
       openDelayNote: 'Aguardar um frame após abrir para atualizar afixos e ícone',
       clearCursorNote: 'Limpar o cursor se falhar para não deixar a pedra presa no mouse',
     },

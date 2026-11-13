@@ -13,7 +13,7 @@ export const chatFr: Record<string, ModuleTranslation> = {
   },
   'chat-copy': {
     title: 'Copier l’historique du chat en un clic',
-    description: 'Maj+Clic sur un onglet de chat ouvre une fenêtre sélectionnable contenant tout l’historique à copier.',
+    description: 'Maj+Clic sur un onglet de chat ouvre une fenêtre dans laquelle vous pouvez sélectionner et copier l’historique du chat.',
     details: 'Pratique pour copier liens Discord, macros de raid ou chaînes WeakAuras.',
     tag: 'Essentiel',
     comments: {
@@ -81,7 +81,7 @@ export const chatFr: Record<string, ModuleTranslation> = {
   },
   'disable-chat-fade': {
     title: 'Désactiver l’effacement automatique du chat',
-    description: 'Empêche les messages du chat de disparaître après inactivité.',
+    description: 'Empêche les messages du chat de disparaître après une période d’inactivité.',
     details: 'Délai personnalisable en secondes en option.',
     tag: 'QoL de base',
     options: {
@@ -106,7 +106,7 @@ export const chatFr: Record<string, ModuleTranslation> = {
   },
   'paste-text': {
     title: 'Coller texte long & macros multi-lignes (/paste)',
-    description: 'Tapez /paste pour ouvrir une zone multi-lignes dépassant la limite de 255 caractères—idéal pour listes /way et macros.',
+    description: 'Tapez /paste pour ouvrir une zone de saisie multiligne dépassant la limite de 255 caractères—idéal pour listes /way et macros.',
     tag: 'Outil malin',
     comments: {
       header: '[ Coller texte long & macros multi-lignes (Paste) ]',

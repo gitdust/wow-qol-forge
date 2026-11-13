@@ -3,7 +3,7 @@ import { ModuleTranslation } from '../../types';
 export const automationEn: Record<string, ModuleTranslation> = {
   'auto-repair': {
     title: 'Auto Repair Gear',
-    description: 'Automatically repairs all equipped gear when talking to a repair vendor, with optional guild bank repair priority.',
+    description: 'Automatically repairs your gear when you talk to a repair vendor, with an option to use guild bank funds first.',
     details: 'Hold Shift when opening a merchant to skip. Falls back to personal gold if guild repair funds are insufficient.',
     tag: 'Essential',
     options: {
@@ -46,7 +46,7 @@ export const automationEn: Record<string, ModuleTranslation> = {
   },
   'automate-quests': {
     title: 'Fast Quest Accept & Turn-In',
-    description: 'Automatically accepts quests and turns in completed ones when talking to NPCs, pausing when you must pick one of multiple rewards.',
+    description: 'Automatically accepts quests and turns in completed ones when talking to NPCs, pausing when you need to choose a reward.',
     details: 'Hold Shift to pause temporarily. Never auto-completes quests costing gold, currencies, crafting reagents, or account-bound items.',
     tag: 'Leveling',
     options: {
@@ -151,7 +151,7 @@ export const automationEn: Record<string, ModuleTranslation> = {
   },
   'dialog-key': {
     title: 'DialogKey (Space & 1-9 for NPC Dialogs)',
-    description: 'Press Space to advance quests and NPC dialogs, and 1–9 (0 for 10th) to pick gossip options or quest rewards. Sleeps in combat.',
+    description: 'Press Space to advance quests and NPC dialogs, and 1–9 (0 for 10th) to pick gossip options or quest rewards. Inactive during combat.',
     details: 'Ignored while holding modifiers. Popup guard keeps Space from accepting group invites, summons, duels, resurrections, or spirit releases.',
     tag: 'Questing MVP',
     options: {
@@ -175,12 +175,12 @@ export const automationEn: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: 'Auto Insert Mythic+ Keystone',
-    description: 'Automatically slots the matching Mythic+ keystone from your bags when opening the Font of Power.',
+    title: 'Automatically Insert Mythic Keystones',
+    description: 'Automatically inserts the matching Mythic Keystone from your bags when you open the Font of Power.',
     details: 'Only inserts a keystone usable in the current dungeon; skips if already slotted or in combat.',
     tag: 'Mythic+',
     comments: {
-      header: '[ Auto Insert Mythic+ Keystone ]',
+      header: '[ Automatically Insert Mythic Keystones ]',
       openDelayNote: 'Wait a frame after Font opens so affix and keystone icons refresh cleanly',
       clearCursorNote: 'Return item to bag if slotting failed so the keystone does not stay on cursor',
     },
@@ -200,16 +200,16 @@ export const automationEn: Record<string, ModuleTranslation> = {
     },
   },
   'auto-combat-log': {
-    title: 'Auto Combat Log in Raids & Mythic+',
+    title: 'Auto Combat Log in raids & Mythic+',
     description: 'Automatically starts combat logging (/combatlog) upon entering Raids or Mythic+ dungeons and stops when leaving.',
     details: 'Only stops logging if it was started by this module; prints status notices in chat.',
     tag: 'Raid Essential',
     options: {
-      raid: { label: 'Enable in Raids' },
+      raid: { label: 'Enable in raids' },
       mythicPlus: { label: 'Enable in Mythic+' },
     },
     comments: {
-      header: '[ Auto Combat Log in Raids & Mythic+ ]',
+      header: '[ Auto Combat Log in raids & Mythic+ ]',
       diffNote: 'Difficulty 8 = Mythic Keystone',
     },
     strings: {

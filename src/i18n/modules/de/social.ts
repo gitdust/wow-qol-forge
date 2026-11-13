@@ -33,12 +33,12 @@ export const socialDe: Record<string, ModuleTranslation> = {
     },
   },
   'block-duel-requests': {
-    title: 'Fremde Duell-Anfragen ablehnen',
+    title: 'Duellanfragen von Fremden ablehnen',
     description: 'Lehnt Duell-Anfragen von fremden Spielern automatisch ab (Freunde und Gildenmitglieder ausgenommen).',
     details: 'Schützt vor Duell-Spam in Hauptstädten oder beim Questen.',
     tag: 'Spamschutz',
     comments: {
-      header: '[ Fremde Duell-Anfragen ablehnen ]',
+      header: '[ Duellanfragen von Fremden ablehnen ]',
     },
   },
   'block-pet-duels': {
@@ -124,7 +124,7 @@ export const socialDe: Record<string, ModuleTranslation> = {
   },
   'lfg-double-click-signup': {
     title: 'Doppelklick-Anmeldung in Organisierten Gruppen',
-    description: 'Doppelklicke einen Eintrag in den Organisierten Gruppen, um dich direkt anzumelden.',
+    description: 'Doppelklicke auf einen Eintrag in den Organisierten Gruppen, um dich direkt anzumelden.',
     details: 'Überspringt den Anmeldedialog bei gewählten Rollen; Shift+Doppelklick öffnet ihn weiterhin.',
     tag: 'Schnell-Queue',
     options: {
@@ -135,7 +135,7 @@ export const socialDe: Record<string, ModuleTranslation> = {
     },
     comments: {
       header: '[ Doppelklick-Anmeldung in Organisierten Gruppen ]',
-      skipNote: 'Automatisch absenden, wenn Anmeldebutton aktiv und kein Shift gedrückt ist',
+      skipNote: 'Automatisch absenden, wenn die Anmeldeschaltfläche aktiv ist und die Umschalttaste nicht gedrückt wird',
     },
   },
   'guild-motd-login': {

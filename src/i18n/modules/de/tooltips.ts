@@ -39,7 +39,7 @@ export const tooltipsDe: Record<string, ModuleTranslation> = {
   },
   'transmog-status': {
     title: 'Transmog-Sammlungsstatus im Tooltip',
-    description: 'Zeigt beim Überfahren von Rüstung oder Waffen unten im Tooltip an, ob die Vorlage bereits in deiner Kriegsmeute gesammelt ist.',
+    description: 'Zeigt unten im Tooltip von Rüstung oder Waffen an, ob die Vorlage bereits zur Sammlung deiner Kriegsmeute gehört.',
     tag: 'Sammler',
     comments: {
       header: '[ Transmog-Sammlungsstatus im Tooltip (Can I Mog It Lite) ]',

@@ -71,7 +71,7 @@ export const chatZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'chat-unclamp': {
-    title: '聊天視窗解除螢幕邊緣吸附',
+    title: '解除聊天視窗的螢幕邊緣限制',
     description: '允許將聊天視窗自由拖曳至螢幕的最邊緣甚至貼緊螢幕邊界，不再被暴雪原生邊距限制。',
     tag: '版面自由',
     comments: {

@@ -34,11 +34,11 @@ export const systemKo: Record<string, ModuleTranslation> = {
     },
   },
   'disable-screen-glow': {
-    title: '전체 화면 글로우 및 취한 흐림 끄기',
+    title: '전체 화면 빛 번짐과 음주 시 화면 흐림 끄기',
     description: '과도한 FFX Glow 화면 번짐과 음주 시 화면 흔들림/흐림 효과를 꺼서 선명한 화면을 유지합니다.',
     tag: '눈 보호',
     comments: {
-      header: '[ 전체 화면 글로우 및 취한 흐림 끄기 ]',
+      header: '[ 전체 화면 빛 번짐과 음주 시 화면 흐림 끄기 ]',
     },
   },
   'combat-nameplates': {
@@ -123,7 +123,7 @@ export const systemKo: Record<string, ModuleTranslation> = {
   },
   'great-vault-reminder': {
     title: '위대한 금고 보상 알림',
-    description: '로그인 또는 UI 재시작 시 수령하지 않은 위대한 금고 보상이 있으면 채팅창과 화면 중앙에 1회 알려줍니다.',
+    description: '로그인 또는 UI 재시작 시 수령하지 않은 위대한 금고 보상이 있으면 채팅창에 한 번 알려줍니다. 화면 중앙에도 알림을 표시할 수 있습니다.',
     details: '쐐기 UI를 열기 전에 접속 직후 바로 확인해 보상을 놓치지 않도록 도와줍니다.',
     tag: '주간 필수',
     options: {

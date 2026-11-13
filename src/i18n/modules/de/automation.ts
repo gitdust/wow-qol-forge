@@ -175,13 +175,13 @@ export const automationDe: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: 'Mythisch+-Schlüsselstein automatisch einsetzen',
+    title: 'Mythischen Schlüsselstein automatisch einsetzen',
     description: 'Setzt beim Öffnen des Brunnens der Macht automatisch den passenden Schlüsselstein aus deinen Taschen ein.',
     details: 'Überspringt im Kampf oder wenn bereits ein Stein eingesetzt ist.',
     tag: 'Mythisch+',
     comments: {
-      header: '[ Mythisch+-Schlüsselstein automatisch einsetzen ]',
-      openDelayNote: 'Einen Frame nach Öffnen warten, bis Affixe und Icons aktualisiert sind',
+      header: '[ Mythischen Schlüsselstein automatisch einsetzen ]',
+      openDelayNote: 'Nach dem Öffnen einen Frame warten, bis Affixe und Icons aktualisiert sind',
       clearCursorNote: 'Cursor leeren, falls Einsetzen fehlschlägt',
     },
   },

@@ -19,7 +19,7 @@ export const inventoryZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'already-known': {
-    title: '已學會配方/圖紙綠色高亮 (AlreadyKnown)',
+    title: '以綠色標示已學習的配方及已收藏的物品 (AlreadyKnown)',
     description:
       '在商人、拍賣場與公會銀行中，為目前角色已經學會的圖紙、配方以及已收集的坐騎、寵物、玩具圖示染成綠色。',
     details: '直接在商人介面一目瞭然分辨哪些配方已經學會，徹底告別手滑買錯重複圖紙。',

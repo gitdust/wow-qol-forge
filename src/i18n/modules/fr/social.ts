@@ -123,18 +123,18 @@ export const socialFr: Record<string, ModuleTranslation> = {
     },
   },
   'lfg-double-click-signup': {
-    title: 'Double-clic pour s’inscrire en groupe prédéfini',
+    title: 'Double-clic pour s’inscrire dans les groupes prédéfinis',
     description: 'Double-cliquez sur une annonce dans la recherche de groupes prédéfinis pour vous inscrire directement.',
-    details: 'Passe la boîte de dialogue si vos rôles sont déjà choisis ; Maj+Double-clic ouvre toujours la fenêtre.',
+    details: 'Ignore la boîte de dialogue si vos rôles sont déjà sélectionnés ; Maj+Double-clic ouvre toujours la fenêtre.',
     tag: 'File rapide',
     options: {
       skipDialog: {
-        label: 'Ignorer la fenêtre si rôles choisis',
+        label: 'Ignorer la fenêtre si les rôles sont sélectionnés',
         description: 'Inscrit immédiatement avec les rôles cochés (Maj affiche la fenêtre)',
       },
     },
     comments: {
-      header: '[ Double-clic pour s’inscrire en groupe prédéfini ]',
+      header: '[ Double-clic pour s’inscrire dans les groupes prédéfinis ]',
       skipNote: 'Valider automatiquement si le bouton S’inscrire est actif sans Maj',
     },
   },

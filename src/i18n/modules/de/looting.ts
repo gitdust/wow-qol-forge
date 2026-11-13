@@ -41,14 +41,14 @@ export const lootingDe: Record<string, ModuleTranslation> = {
   'loot-spec-by-boss': {
     title: 'Beutespezialisierung nach Boss oder Instanz',
     description:
-      'Wechselt bei Kampfbeginn anhand deiner Regeln automatisch die Beutespezialisierung (z. B. "Boss=Frost") und stellt sie bei anderen Bossen oder nach Verlassen der Instanz wieder her.',
+      'Wechselt deine Beutespezialisierung zu Beginn eines Bosskampfs. Ohne passende Regel oder beim Verlassen der Instanz wird die vorherige Beutespezialisierung wiederhergestellt.',
     details:
       'Regeln akzeptieren Bossname, Instanzname oder Encounter-ID. Mit "aktuell" folgt die Beute der aktiven Spezialisierung.',
     tag: 'Raid-Helfer',
     options: {
       rules: {
         label: 'Wechselregeln',
-        description: 'Format "BossOderInstanz=Spezialisierung", getrennt durch Komma/Semikolon, z. B. Boss=Frost',
+        description: 'Format: "BossnameOderBegegnungs-ID=Spezialisierung" oder "Instanzname=Spezialisierung". Verwende die Namen aus dem Spiel und trenne Regeln durch Kommas oder Semikolons.',
       },
       announce: { label: 'Wechsel im Chat ankündigen' },
     },

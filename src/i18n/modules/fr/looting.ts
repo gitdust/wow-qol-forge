@@ -39,31 +39,31 @@ export const lootingFr: Record<string, ModuleTranslation> = {
     },
   },
   'loot-spec-by-boss': {
-    title: 'Spécialisation de butin auto par boss ou instance',
+    title: 'Spécialisation du butin auto par boss ou instance',
     description:
-      'Change automatiquement votre spécialisation de butin au début d’un combat de boss selon vos règles (ex. « Boss=Givre ») et restaure la précédente ensuite.',
+      'Change votre spécialisation du butin au début d’un combat contre un boss. Rétablit la précédente si aucune règle ne correspond ou si vous quittez l’instance.',
     details:
-      'Accepte nom de boss, d’instance ou ID de rencontre. Utilisez « actuelle » pour suivre votre spécialisation active.',
+      'Accepte le nom du boss, le nom de l’instance ou l’ID de la rencontre. Les règles de boss sont prioritaires. Utilisez « actuelle » pour suivre votre spécialisation active.',
     tag: 'Aide Raid',
     options: {
       rules: {
         label: 'Règles de changement',
-        description: 'Format « BossOuInstance=Spé », séparés par virgule/point-virgule, ex. Boss=Givre',
+        description: 'Utilisez « NomDuBossOuIDDeRencontre=Spécialisation » ou « NomInstance=Spécialisation ». Saisissez les noms tels qu’ils apparaissent en jeu et séparez les règles par des virgules ou des points-virgules.',
       },
       announce: { label: 'Annoncer les changements dans le chat' },
     },
     comments: {
-      header: '[ Spécialisation de butin auto par boss ou instance (LootSpecSwapper) ]',
-      originalNote: 'Spécialisation de butin avant le premier changement auto ; nil = inchangé',
+      header: '[ Spécialisation du butin auto par boss ou instance (LootSpecSwapper) ]',
+      originalNote: 'Spécialisation du butin avant le premier changement auto ; nil = inchangé',
       parseRulesNote: 'Analyser les règles « Nom=Spé » ; couper uniquement sur « = » et normaliser la ponctuation',
-      findSpecNote: 'Nom de spé -> ID de spécialisation de butin ; 0 = spé actuelle',
+      findSpecNote: 'Nom de spé -> ID de spécialisation du butin ; 0 = spé actuelle',
       noRuleNote: 'Boss sans règle : restaurer la configuration précédente',
       leaveInstanceNote: 'Restaurer en quittant l’instance',
     },
     strings: {
       currentKeyword: 'actuelle',
       currentSpecLabel: 'Spé actuelle',
-      switchedMsg: '|cff00ff99[QoL]|r Spécialisation de butin passée sur « %s »%s',
+      switchedMsg: '|cff00ff99[QoL]|r Spécialisation du butin passée sur « %s »%s',
       restoredNoRule: ' (Boss : %s sans règle, restauré)',
       invalidSpecMsg: '|cffff5555[QoL]|r La spé de la règle « %s=%s » n’appartient pas à votre classe ; ignoré',
       restoredLeftInstance: ' (Instance quittée, restauré)',

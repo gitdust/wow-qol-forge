@@ -10,7 +10,7 @@ interface ModuleRowProps {
   isSelected: boolean;
   downloadCount?: number;
   moduleOptions: Record<string, Record<string, any>>;
-  onToggle: (id: string, e?: React.MouseEvent | React.ChangeEvent) => void;
+  onToggle: (id: string) => void;
   onViewCode: (module: QoLModule) => void;
 }
 
@@ -102,7 +102,7 @@ export const ModuleRow: React.FC<ModuleRowProps> = ({
         <input
           type="checkbox"
           checked={isSelected}
-          onChange={(e) => onToggle(module.id, e)}
+          onChange={() => onToggle(module.id)}
           className="rounded border-slate-700 bg-slate-900 text-amber-500 focus:ring-amber-500/40 h-4 w-4 cursor-pointer flex-shrink-0"
         />
 

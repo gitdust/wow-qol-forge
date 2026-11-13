@@ -175,13 +175,13 @@ export const automationEs: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: 'Insertar piedra angular Mítica+ automáticamente',
+    title: 'Insertar automáticamente la piedra angular mítica',
     description: 'Coloca automáticamente la piedra angular correspondiente de tus bolsas al abrir la Fuente de poder.',
     details: 'Se omite en combate o si ya hay una piedra insertada.',
     tag: 'Míticas+',
     comments: {
-      header: '[ Insertar piedra angular Mítica+ automáticamente ]',
-      openDelayNote: 'Esperar un frame tras abrir la Fuente para que se actualicen afijos e icono',
+      header: '[ Insertar automáticamente la piedra angular mítica ]',
+      openDelayNote: 'Esperar un fotograma tras abrir la Fuente para que se actualicen los afijos y el icono',
       clearCursorNote: 'Limpiar el cursor si falla para no dejar la piedra colgada',
     },
   },

@@ -39,16 +39,16 @@ export const lootingEs: Record<string, ModuleTranslation> = {
     },
   },
   'loot-spec-by-boss': {
-    title: 'Especialización de botín automática por jefe o banda',
+    title: 'Especialización de botín automática por jefe o estancia',
     description:
-      'Cambia automáticamente tu especialización de botín al iniciar un encuentro según tus reglas (ej. «Jefe=Escarcha») y restaura la original después.',
+      'Cambia tu especialización de botín al comenzar un encuentro con un jefe. Restaura la anterior si no hay una regla aplicable o si sales de la estancia.',
     details:
-      'Acepta nombre de jefe, de estancia o ID de encuentro. Usa «actual» para seguir tu especialización activa.',
+      'Acepta el nombre del jefe, el de la estancia o el ID del encuentro. Las reglas de jefe tienen prioridad. Usa «actual» para seguir tu especialización activa.',
     tag: 'Ayuda Banda',
     options: {
       rules: {
         label: 'Reglas de cambio',
-        description: 'Formato «JefeOEstancia=Espec», separado por comas/punto y coma, ej. Jefe=Escarcha',
+        description: 'Usa «NombreDeJefeOIdDeEncuentro=Especialización» o «NombreDeEstancia=Especialización». Escribe los nombres tal como aparecen en el juego y separa las reglas con comas o puntos y coma.',
       },
       announce: { label: 'Anunciar cambios en el chat' },
     },

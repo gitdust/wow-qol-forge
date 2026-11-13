@@ -2,27 +2,23 @@ import { UiDictionary } from '../types';
 
 export const es: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Generador minimalista de addons para WoW Retail',
-    description:
-      'Generador web de addons QoL personalizados para World of Warcraft Retail. Elige solo los módulos útiles que necesitas, sin código sobrante, y descarga tu ZIP.',
-    ogTitle: 'WoW QoL Forge - Generador minimalista de addons para WoW Retail',
-    ogDescription:
-      'Generador de addons QoL para WoW Retail. Combina {count} módulos ligeros sin relleno y crea tu propio addon.',
+    heading: 'Generador de addons para World of Warcraft Retail',
+    description: 'Elige entre {count} módulos, como la reparación automática y el despojo rápido. Ajusta las opciones, revisa el código Lua y descarga tu addon listo para instalar en formato ZIP.',
     ogImageAlt: 'Icono modular de WoW QoL Forge',
     siteSubtitle: 'Forja de addons minimalistas',
     gameType: 'Retail',
   },
   nav: {
-    backToModules: 'Volver a módulos',
+    backToModules: 'Volver a los módulos',
     changelog: 'Historial de cambios',
-    githubRepo: 'Repositorio GitHub',
+    githubRepo: 'Repositorio de GitHub',
     languageAria: 'Cambiar idioma',
   },
   toolbar: {
     totalModules: '{count} módulos incluidos',
     showingCount: 'Mostrando {count} módulos',
     selectedCount: 'Seleccionados: {selected} / {total}',
-    searchPlaceholder: 'Buscar nombre o descripción del módulo...',
+    searchPlaceholder: 'Buscar por nombre o descripción del módulo...',
     clearSearch: 'Limpiar búsqueda',
     selectAllCurrent: 'Seleccionar visibles',
     unselectAllCurrent: 'Deseleccionar visibles',
@@ -53,7 +49,7 @@ export const es: UiDictionary = {
     clearAllTitle: 'Quitar todos los módulos seleccionados',
     closeDrawer: 'Cerrar panel',
     addonNameLabel: 'Nombre de la carpeta del addon',
-    addonNameHint: '(Solo letras en inglés, cualquier longitud)',
+    addonNameHint: '(Solo letras de la A a la Z, cualquier longitud)',
     addonNameDefault: 'Por defecto: {name}',
     charsCount: '{count} car.',
     addonNameError: 'El nombre no puede estar vacío y solo admite letras (A-Z, a-z)',
@@ -71,7 +67,6 @@ export const es: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Abrir selección para configurar y descargar',
-    buttonLabel: 'Configurar y descargar',
   },
   codeModal: {
     subtitle: 'Código Lua limpio y sin dependencias para WoW Retail moderno',
@@ -86,7 +81,7 @@ export const es: UiDictionary = {
   changelog: {
     title: 'Historial de cambios',
     currentVersion: 'Versión actual',
-    backToModules: 'Volver a módulos',
+    backToModules: 'Volver a los módulos',
     currentBadge: 'Actual',
     types: {
       added: 'Añadido',
@@ -179,7 +174,7 @@ export const es: UiDictionary = {
     wowUiSourceLabel: 'WoW UI Source (GitHub)',
   },
   alerts: {
-    invalidAddonName: 'Introduce un nombre de addon solo con letras en inglés (ej. MyQol)',
+    invalidAddonName: 'Introduce un nombre de addon solo con letras de la A a la Z (p. ej., MyQol)',
     selectOneModule: 'Selecciona al menos un módulo',
     downloadFailed: 'No se pudo generar el archivo, inténtalo de nuevo',
     defaultAddonNotes:

@@ -39,7 +39,7 @@ export const tooltipsZhTW: Record<string, ModuleTranslation> = {
   },
   'transmog-status': {
     title: '物品塑形收集狀態提示',
-    description: '滑鼠懸停在護甲或武器上時，在滑鼠提示底部直接標註該外觀目前是否已經加入戰團塑形收藏。',
+    description: '將滑鼠移到護甲或武器上時，在滑鼠提示底部直接標註該外觀目前是否已經加入戰隊塑形收藏。',
     tag: '收集黨必備',
     comments: {
       header: '[ 物品塑形收集狀態提示 (Can I Mog It 精簡版) ]',

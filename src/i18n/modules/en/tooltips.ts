@@ -39,7 +39,7 @@ export const tooltipsEn: Record<string, ModuleTranslation> = {
   },
   'transmog-status': {
     title: 'Transmog Collection Status Tooltip',
-    description: 'Shows whether an armor or weapon appearance is already collected in your Warband wardrobe when hovered.',
+    description: 'Hover over armor or weapons to see whether your Warband has collected the appearance.',
     tag: 'Collectors',
     comments: {
       header: '[ Transmog Collection Status Tooltip (Can I Mog It Lite) ]',

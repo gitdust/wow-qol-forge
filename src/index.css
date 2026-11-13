@@ -26,3 +26,52 @@
 .glow-card:hover {
   box-shadow: 0 8px 30px -10px rgba(245, 158, 11, 0.15);
 }
+
+.selection-count {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  line-height: 1.25rem;
+}
+
+.selection-count-outgoing {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .selection-count {
+    --count-offset: -100%;
+  }
+
+  .selection-count[data-direction="up"] {
+    --count-offset: 100%;
+  }
+
+  .selection-count-incoming,
+  .selection-count-outgoing {
+    grid-area: 1 / 1;
+  }
+
+  .selection-count-incoming {
+    animation: selection-count-enter 180ms ease-out both;
+  }
+
+  .selection-count-outgoing {
+    display: block;
+    animation: selection-count-exit 180ms ease-out both;
+  }
+}
+
+@keyframes selection-count-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--count-offset));
+  }
+}
+
+@keyframes selection-count-exit {
+  to {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--count-offset)));
+  }
+}

@@ -92,8 +92,8 @@ export const socialZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'safe-queue': {
-    title: '排本確認安全保護與倒數計時',
-    description: '隱藏戰場/競技場就位框上的「離開佇列」按鈕，徹底防止手誤取消；確認按鈕置中，並以綠/黃/紅三色顯示剩餘倒數。',
+    title: 'PvP 排隊確認保護與倒數計時',
+    description: '隱藏戰場/競技場就位框上的「離開佇列」按鈕，避免誤按取消排隊；確認按鈕置中，並以綠/黃/紅三色顯示剩餘時間。',
     tag: '競技副本',
     options: {
       announceWaitTime: {
@@ -102,13 +102,13 @@ export const socialZhTW: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 排本確認安全保護 (SafeQueue) ]',
+      header: '[ PvP 排隊確認保護 (SafeQueue) ]',
       hideLeaveNote: '隱藏離開按鈕，防止誤觸取消排隊',
       waitTimeNote: '播報排隊耗時: 用伺服器記錄的已等待時間，插件晚於排隊開始載入也能正確統計',
     },
     strings: {
       remainingLabel: '剩餘時間 ',
-      waitTimeMsg: '|cff33ff99[排本助手]|r 配對成功！本次排隊等待: %02d分%02d秒',
+      waitTimeMsg: '|cff33ff99[PvP 排隊助手]|r 配對成功！本次排隊等待: %02d分%02d秒',
     },
   },
   'copy-player-name': {

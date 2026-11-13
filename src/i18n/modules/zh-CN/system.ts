@@ -62,14 +62,14 @@ export const systemZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'flash-taskbar': {
-    title: '排本就位后台强提醒',
+    title: '排队与就位确认的任务栏提醒',
     description:
       '切屏到后台看视频或网页时，一旦地下城/团队就绪、战场进组、战斗复活或被召唤，自动闪烁 Windows 任务栏并发出响铃；收到密语时也可闪烁任务栏。',
     tag: '切屏必备',
     options: {
       playSound: {
         label: '同时播放提示音',
-        description: '在任务栏闪烁时，通过主声道播放高穿透力就位音效',
+        description: '在任务栏闪烁时，通过主声道播放就位确认提示音',
       },
       flashOnWhisper: {
         label: '收到密语时也闪烁任务栏',
@@ -77,11 +77,11 @@ export const systemZhCN: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 排本就位后台强提醒 (FlashTaskBar) ]',
+      header: '[ 排队与就位确认的任务栏提醒 (FlashTaskBar) ]',
       whisperNote: '密语：只看事件是否触发，不读取消息内容 (副本内消息内容对插件不可读)',
       readyCheckNote: '团队就位确认 / 随机副本就位 / 战斗复活 / 召唤',
       battlefieldNote: '战场 / 竞技场进入确认',
-      lfgHookNote: '预组队伍邀请 (参考 FlashTaskBar 的 LFGListInviteDialog_Show 钩子)',
+      lfgHookNote: '预创建队伍邀请 (参考 FlashTaskBar 的 LFGListInviteDialog_Show 钩子)',
     },
   },
   'talent-ready-check': {

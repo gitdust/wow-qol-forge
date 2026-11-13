@@ -88,16 +88,16 @@ export const automationZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'easy-item-destroy': {
-    title: '便捷摧毁稀有物品 (免输 DELETE)',
-    description: '摧毁精良（蓝色）/史诗（紫色）物品时，无需在输入框手动敲入“DELETE”，直接点击确认即可。',
+    title: '摧毁物品时跳过文字确认',
+    description: '摧毁精良（蓝色）/史诗（紫色）物品时，无需在输入框手动输入确认文字，直接点击确认即可。',
     details: '所有摧毁确认框都会显示物品链接（战斗宠物显示名字与等级），既去除了繁琐的手动打字，又防止误删珍贵物品。',
     tag: '极简体验',
     comments: {
       header: '[ 便捷摧毁稀有物品 (Leatrix Plus EasyItemDestroy) ]',
-      lineNote: 'DELETE_GOOD_ITEM 第二行是「请输入 DELETE 确认」提示，隐藏输入框后一并去掉',
+      lineNote: 'DELETE_GOOD_ITEM 第二行是要求输入确认文字的提示，隐藏输入框后一并去掉',
       petNote: '战斗宠物显示为「名字 (等级 N)」',
       dialogsNote: '摧毁确认框不一定是 StaticPopup1 (已有其他弹窗时会排到后面)，按名称查找',
-      hideEditNote: '需要输入 DELETE 的物品: 隐藏输入框并直接允许确认',
+      hideEditNote: '需要输入确认文字的物品: 隐藏输入框并直接允许确认',
       appendLinkNote: '普通物品: 在确认框里补上物品链接',
     },
   },
@@ -150,7 +150,7 @@ export const automationZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'dialog-key': {
-    title: '空格键推进任务与NPC对话',
+    title: '空格键推进任务与 NPC 对话',
     description:
       '与 NPC 对话、接交任务时，支持按空格键（Space）快速推进/完成，按数字键 1-9（0 为第 10 项）挑选对话分支或任务奖励。战斗中自动休眠。',
     details: '按住 Shift/Ctrl/Alt 时不拦截按键。弹窗保护开启时，空格不会替你接受组队邀请、召唤、决斗、复活或释放灵魂。',
@@ -166,7 +166,7 @@ export const automationZhCN: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 空格键推进任务与NPC对话 (DialogKey) ]',
+      header: '[ 空格键推进任务与 NPC 对话 (DialogKey) ]',
       blacklistNote: '这些弹窗按空格也不点 (取消复活、物品升级、离开时空漫游等，与 DialogKey 内置黑名单一致)',
       selfResNote: '有灵魂石/复生等自我复活时使用第二个按钮，否则不替玩家释放灵魂',
       gossipButtonsNote: '收集当前对话窗口中可点击的选项按钮，按显示顺序排列',
@@ -176,13 +176,13 @@ export const automationZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: '大秘境自动放入钥石',
-    description: '在副本门口打开大秘境基座时，自动把背包里本副本的钥石放进去，只需再点「开始」。',
-    details: '只放入可在当前副本使用的钥石；基座里已有钥石或正在战斗中时不操作。',
+    title: '自动放入史诗钥石',
+    description: '在地下城内打开能量之泉时，自动放入背包中与当前地下城对应的史诗钥石。',
+    details: '只放入可在当前副本使用的钥石；能量之泉中已有钥石或正在战斗中时不操作。',
     tag: '大秘境',
     comments: {
-      header: '[ 大秘境自动放入钥石 ]',
-      openDelayNote: '等暴雪的基座界面打开后再放入，界面才会刷新词缀和钥石图标',
+      header: '[ 自动放入史诗钥石 ]',
+      openDelayNote: '等能量之泉界面打开后再放入，界面才会刷新词缀和钥石图标',
       clearCursorNote: '放入失败时把物品放回背包，避免钥石留在鼠标上',
     },
   },

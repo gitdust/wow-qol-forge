@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const pt: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Gerador minimalista de addons para WoW Retail',
-    description:
-      'Gerador online de addons QoL personalizados para World of Warcraft Retail. Escolha apenas os módulos úteis sem código desnecessário e baixe seu ZIP.',
-    ogTitle: 'WoW QoL Forge - Gerador minimalista de addons para WoW Retail',
-    ogDescription:
-      'Gerador de addons QoL para WoW Retail. Combine {count} módulos leves sem excessos e baixe seu addon sob medida.',
+    heading: 'Gerador de addons para World of Warcraft Retail',
+    description: 'Escolha entre {count} módulos, como reparo automático e saque rápido. Ajuste as opções, confira o código Lua e baixe seu addon pronto para instalar em um arquivo ZIP.',
     ogImageAlt: 'Ícone modular WoW QoL Forge',
     siteSubtitle: 'Oficina de addons minimalistas',
     gameType: 'Retail',
@@ -15,7 +11,7 @@ export const pt: UiDictionary = {
   nav: {
     backToModules: 'Voltar aos módulos',
     changelog: 'Histórico',
-    githubRepo: 'Repositório GitHub',
+    githubRepo: 'Repositório do GitHub',
     languageAria: 'Mudar idioma',
   },
   toolbar: {
@@ -38,14 +34,14 @@ export const pt: UiDictionary = {
     downloadsTitle: '{count} downloads totais',
     optionsButton: 'Opções',
     optionsPreviewTitle: '{title} · Prévia das opções',
-    optionsReadonlyHint: 'Somente leitura · Marque este módulo para configurar na gaveta lateral',
+    optionsReadonlyHint: 'Somente leitura · Marque este módulo para configurar no painel lateral',
     optionOn: 'Ativo',
     optionOff: 'Inativo',
     sourceButton: 'Código',
     sourceButtonTitle: 'Ver código Lua independente',
   },
   drawer: {
-    title: 'Módulos selecionados e config',
+    title: 'Módulos selecionados e configurações',
     itemCount: '{count} itens',
     defaultsHintPrefix: 'Estes valores são padrões. Digite',
     defaultsHintSuffix: 'no jogo para ativar/desativar módulos ou ajustar opções',
@@ -53,7 +49,7 @@ export const pt: UiDictionary = {
     clearAllTitle: 'Remover todos os módulos selecionados',
     closeDrawer: 'Fechar painel',
     addonNameLabel: 'Nome da pasta do addon',
-    addonNameHint: '(Apenas letras em inglês, qualquer tamanho)',
+    addonNameHint: '(Apenas letras de A a Z, qualquer tamanho)',
     addonNameDefault: 'Padrão: {name}',
     charsCount: '{count} car.',
     addonNameError: 'O nome do addon não pode ficar vazio e só aceita letras (A-Z, a-z)',
@@ -71,7 +67,6 @@ export const pt: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Abrir módulos selecionados para configurar e baixar',
-    buttonLabel: 'Configurar e Baixar',
   },
   codeModal: {
     subtitle: 'Código Lua limpo e sem dependências para WoW Retail moderno',
@@ -179,7 +174,7 @@ export const pt: UiDictionary = {
     wowUiSourceLabel: 'WoW UI Source (GitHub)',
   },
   alerts: {
-    invalidAddonName: 'Digite um nome de addon apenas com letras em inglês (ex.: MyQol)',
+    invalidAddonName: 'Digite um nome de addon apenas com letras de A a Z (ex.: MyQol)',
     selectOneModule: 'Selecione pelo menos um módulo',
     downloadFailed: 'Falha ao gerar o pacote, tente novamente',
     defaultAddonNotes:
@@ -258,7 +253,7 @@ export const pt: UiDictionary = {
     luaHeaderTargetInterface: 'Interface alvo',
     luaHeaderSelectedModules: 'Módulos selecionados',
     luaHeaderNote:
-      'Nota: As opções web são padrões. Digite /{slash} no jogo para alternar módulos e editar opções.',
+      'Nota: As opções do site definem os valores padrão. Digite /{slash} no jogo para alternar módulos e editar opções.',
     commentErrorReport: 'Relatório de erros (imprimir cada erro único apenas uma vez)',
     runtimeErrorPrint: 'Módulo ',
     commentEventBus:
@@ -287,7 +282,7 @@ export const pt: UiDictionary = {
     readmeGeneratedBy: 'Gerado no navegador com **WoW QoL Forge**.',
     readmeImportantTitle: '## 💡 Notas importantes',
     readmeImportantBody:
-      'Os módulos escolhidos no site ficam ativos ao entrar no jogo com os valores padrões definidos.\nDigite `/{slash}` no chat para abrir o painel: escolha a categoria à esquerda, marque para ativar/desativar,\ne clique na seta à direita para expandir subopções. Tudo é salvo automaticamente.\nTambém disponível em Opções -> AddOns.',
+      'Os módulos escolhidos no site ficam ativos ao entrar no jogo com os valores padrão definidos.\nDigite `/{slash}` no chat para abrir o painel: escolha a categoria à esquerda, marque para ativar/desativar,\ne clique na seta à direita para expandir subopções. Tudo é salvo automaticamente.\nTambém disponível em Opções -> AddOns.',
     readmeInstallTitle: '## 📦 Instalação',
     readmeInstallStep1: '1. Extraia o arquivo baixado para obter a pasta `{name}`.',
     readmeInstallStep2:
@@ -299,7 +294,7 @@ export const pt: UiDictionary = {
       loadedStateComment:
         'Registra o estado inicial para detectar quando é necessário recarregar a interface',
       needsReloadComment:
-        'Ativar ou desativar módulos exige recarregar a UI pois hooks não podem ser desfeitos',
+        'Ativar ou desativar módulos exige recarregar a interface, pois hooks não podem ser desfeitos',
       needsReloadStatus: '|cffff8040Algumas alterações exigem recarregar a UI|r',
       setValueComment: 'Salvar imediatamente e notificar o módulo ativo se houver callback live',
       optionLineComment: 'Linha de opção: caixa / número / texto / menu',

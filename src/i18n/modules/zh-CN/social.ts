@@ -23,7 +23,7 @@ export const socialZhCN: Record<string, ModuleTranslation> = {
   'invite-from-whisper': {
     title: '密语关键字自动组队邀请',
     description: '当有玩家密语特定暗号（如“111”或“组”）时，若当前为队长或未组队，自动向其发出组队邀请。',
-    details: '公会活动、世界BOSS或大秘境开组时无需手动挨个打字组人。',
+    details: '公会活动、世界首领或大秘境开组时无需手动挨个打字组人。',
     tag: '开组利器',
     options: {
       keyword: { label: '组队密语暗号' },
@@ -92,8 +92,8 @@ export const socialZhCN: Record<string, ModuleTranslation> = {
     },
   },
   'safe-queue': {
-    title: '排本确认安全保护与倒计时',
-    description: '隐藏战场/竞技场就位框上的“离开队列”按钮，彻底防止手抖误触取消；确认按钮居中，并以绿/黄/红三色显示剩余倒计时。',
+    title: 'PvP 排队确认保护与倒计时',
+    description: '隐藏战场/竞技场就位框上的「离开队列」按钮，防止误点取消排队；确认按钮居中，并以绿/黄/红三色显示剩余时间。',
     tag: '竞技副本',
     options: {
       announceWaitTime: {
@@ -102,13 +102,13 @@ export const socialZhCN: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 排本确认安全保护 (SafeQueue) ]',
+      header: '[ PvP 排队确认保护 (SafeQueue) ]',
       hideLeaveNote: '隐藏离开按钮，防止误触取消排队',
       waitTimeNote: '播报排队耗时: 用服务器记录的已等待时间，插件晚于排队开始加载也能正确统计',
     },
     strings: {
       remainingLabel: '剩余时间 ',
-      waitTimeMsg: '|cff33ff99[排本助手]|r 匹配成功！本次排队等待: %02d分%02d秒',
+      waitTimeMsg: '|cff33ff99[PvP 排队助手]|r 匹配成功！本次排队等待: %02d分%02d秒',
     },
   },
   'copy-player-name': {

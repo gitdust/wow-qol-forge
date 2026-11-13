@@ -60,7 +60,7 @@ export const uiKo: Record<string, ModuleTranslation> = {
     },
   },
   'hide-alerts': {
-    title: '업적 및 전리품 알림 토스트 숨기기',
+    title: '업적 및 전리품 팝업 알림 숨기기',
     description: '화면 하단에 뜨는 업적 달성, 탈것 획득, 도안 습득 알림을 숨기며 레벨업/우두머리 이벤트 토스트도 함께 숨길 수 있습니다.',
     tag: '깔끔한 UI',
     options: {
@@ -70,7 +70,7 @@ export const uiKo: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 업적 및 전리품 알림 토스트 숨기기 (Leatrix Plus NoAlerts) ]',
+      header: '[ 업적 및 전리품 팝업 알림 숨기기 (Leatrix Plus NoAlerts) ]',
       preventReregisterNote: '블리자드 코드가 나중에 이벤트를 다시 등록하지 못하도록 방지',
       eventToastNote: '이벤트 토스트 (Leatrix Plus HideEventToasts)',
     },

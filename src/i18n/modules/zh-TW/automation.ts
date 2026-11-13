@@ -45,7 +45,7 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'automate-quests': {
-    title: '任務快速接交',
+    title: '快速接受與交回任務',
     description: '與 NPC 對話時自動承接任務並回報已完成任務。遇到需要自選多選一獎勵時自動暫停。',
     details: '按住 Shift 可暫時暫停自動化接交。需要支付金幣、貨幣、製造材料或帳號綁定物品的任務不會自動回報，防止意外損失。',
     tag: '升級提速',
@@ -60,8 +60,8 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
       },
     },
     comments: {
-      header: '[ 任務快速接交 ]',
-      accountBoundNote: '需要的物品是否為戰團/帳號綁定 (這類物品交出後無法再取得，不自動交)',
+      header: '[ 快速接受與交回任務 ]',
+      accountBoundNote: '需要的物品是否為戰隊/帳號綁定 (這類物品交出後無法再取得，不自動交)',
       currencyNote: '回報需要貨幣、製造材料或帳號綁定物品時不自動交 (參考 Leatrix Plus)',
       noAcceptNote: '不自動接任務',
       noCompleteNote: '不自動交任務',
@@ -88,16 +88,16 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'easy-item-destroy': {
-    title: '便捷摧毀稀有物品 (免輸 DELETE)',
-    description: '摧毀精良（藍色）/史詩（紫色）物品時，無需在輸入框手動輸入「DELETE」，直接點擊確認即可。',
+    title: '摧毀物品時略過文字確認',
+    description: '摧毀精良（藍色）/史詩（紫色）物品時，無需在輸入框手動輸入確認文字，直接點擊確認即可。',
     details: '所有摧毀確認框都會顯示物品連結（戰鬥寵物顯示名字與等級），既去除了繁瑣的手動打字，又防止誤刪珍貴物品。',
     tag: '極簡體驗',
     comments: {
       header: '[ 便捷摧毀稀有物品 (Leatrix Plus EasyItemDestroy) ]',
-      lineNote: 'DELETE_GOOD_ITEM 第二行是「請輸入 DELETE 確認」提示，隱藏輸入框後一併去掉',
+      lineNote: 'DELETE_GOOD_ITEM 第二行是要求輸入確認文字的提示，隱藏輸入框後一併去掉',
       petNote: '戰鬥寵物顯示為「名字 (等級 N)」',
       dialogsNote: '摧毀確認框不一定是 StaticPopup1 (已有其他彈窗時會排到後面)，依名稱尋找',
-      hideEditNote: '需要輸入 DELETE 的物品: 隱藏輸入框並直接允許確認',
+      hideEditNote: '需要輸入確認文字的物品: 隱藏輸入框並直接允許確認',
       appendLinkNote: '一般物品: 在確認框裡補上物品連結',
     },
   },
@@ -176,13 +176,13 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: '傳奇鑰石自動放入鑰石',
-    description: '在副本門口開啟能量泉源時，自動把背包裡本副本的鑰石放進去，只需再點「開始」。',
-    details: '只放入可在目前副本使用的鑰石；基座裡已有鑰石或正在戰鬥中時不操作。',
+    title: '自動放入傳奇鑰石',
+    description: '在地城內開啟鑰石介面時，自動放入背包中與目前地城相符的傳奇鑰石。',
+    details: '只放入可在目前地城使用的鑰石。已有鑰石或正在戰鬥時會略過。',
     tag: '傳奇鑰石',
     comments: {
-      header: '[ 傳奇鑰石自動放入鑰石 ]',
-      openDelayNote: '等暴雪的基座介面開啟後再放入，介面才會重新整理詞綴和鑰石圖示',
+      header: '[ 自動放入傳奇鑰石 ]',
+      openDelayNote: '等鑰石介面開啟後再放入，介面才會重新整理詞綴和鑰石圖示',
       clearCursorNote: '放入失敗時把物品放回背包，避免鑰石留在滑鼠上',
     },
   },
@@ -201,7 +201,7 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
     },
   },
   'auto-combat-log': {
-    title: '進團本與傳奇鑰石自動開啟戰鬥紀錄',
+    title: '團隊副本與傳奇鑰石地城自動記錄戰鬥',
     description: '進入團隊副本或開始傳奇鑰石地城時自動開啟戰鬥紀錄（/combatlog），離開後自動關閉，方便上傳 Warcraft Logs。',
     details: '只會關閉由本功能開啟的紀錄，你手動開啟的不會被關掉。開啟和關閉時會在聊天視窗提示。',
     tag: '團本必備',
@@ -210,7 +210,7 @@ export const automationZhTW: Record<string, ModuleTranslation> = {
       mythicPlus: { label: '傳奇鑰石中開啟' },
     },
     comments: {
-      header: '[ 進團本與傳奇鑰石自動開啟戰鬥紀錄 ]',
+      header: '[ 團隊副本與傳奇鑰石地城自動記錄戰鬥 ]',
       diffNote: '難度 8 = 傳奇鑰石',
     },
     strings: {

@@ -123,12 +123,12 @@ export const systemEs: Record<string, ModuleTranslation> = {
   },
   'great-vault-reminder': {
     title: 'Recordatorio de recompensa de la Gran Cámara',
-    description: 'Te avisa una vez al iniciar sesión en el chat (y en el centro de pantalla si quieres) cuando hay recompensas pendientes en la Gran Cámara.',
+    description: 'Si tienes recompensas pendientes en la Gran Cámara, te avisa una vez por el chat al entrar o recargar la interfaz. También puedes mostrar el aviso en el centro de la pantalla.',
     details: 'Te recuerda nada más conectar sin tener que abrir la interfaz de Míticas+.',
     tag: 'Semanal',
     options: {
       showCenter: {
-        label: 'Mostrar alerta en el centro de pantalla',
+        label: 'Mostrar alerta en el centro de la pantalla',
         description: 'Muestra un aviso único estilo alerta de banda en pantalla',
       },
       playSound: { label: 'Reproducir sonido de aviso' },

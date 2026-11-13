@@ -2,12 +2,8 @@ import { UiDictionary } from '../types';
 
 export const en: UiDictionary = {
   seo: {
-    title: 'WoW QoL Forge - Minimalist Custom Retail WoW Addon Builder',
-    description:
-      'Client-side custom QoL addon generator for World of Warcraft Retail. Pick only the modular utilities you need, zero bloat, and download a lightweight addon zip in one click.',
-    ogTitle: 'WoW QoL Forge - Minimalist Custom Retail WoW Addon Builder',
-    ogDescription:
-      'Custom QoL addon generator for Retail WoW. Mix and match {count} modular features with zero bloat and download your tailored addon.',
+    heading: 'World of Warcraft Retail Addon Builder',
+    description: 'Build a custom WoW Retail addon from {count} quality-of-life modules. Choose features such as auto repair and faster looting, preview the Lua, and download an installable ZIP.',
     ogImageAlt: 'WoW QoL Forge modular cube icon',
     siteSubtitle: 'Minimalist Addon Forge',
     gameType: 'Retail',
@@ -56,7 +52,7 @@ export const en: UiDictionary = {
     addonNameHint: '(Letters only, any length)',
     addonNameDefault: 'Default: {name}',
     charsCount: '{count} chars',
-    addonNameError: 'Addon name cannot be empty and may only contain letters (A-Z, a-z)',
+    addonNameError: 'Addon name cannot be empty and may contain only letters (A-Z, a-z)',
     emptyTitle: 'No modules selected yet',
     emptyDesc:
       'Check the QoL modules you want from the list on the left to review and customize their options here.',
@@ -71,7 +67,6 @@ export const en: UiDictionary = {
   },
   floating: {
     buttonTitle: 'Open selected modules drawer to configure and download',
-    buttonLabel: 'Build & Download',
   },
   codeModal: {
     subtitle: 'Zero-bloat, dependency-free modern Retail WoW Lua code',
@@ -184,7 +179,7 @@ export const en: UiDictionary = {
     wowUiSourceLabel: 'WoW UI Source (GitHub)',
   },
   alerts: {
-    invalidAddonName: 'Please enter an English-letters-only addon name (e.g. MyQol)',
+    invalidAddonName: 'Please enter an addon name using only A–Z or a–z (e.g. MyQol)',
     selectOneModule: 'Please select at least one module',
     downloadFailed: 'Failed to generate package, please try again',
     defaultAddonNotes:

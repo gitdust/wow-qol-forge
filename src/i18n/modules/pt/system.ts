@@ -60,7 +60,7 @@ export const systemPt: Record<string, ModuleTranslation> = {
     },
   },
   'flash-taskbar': {
-    title: 'Piscar barra de tarefas em filas, pronto e sussurros',
+    title: 'Piscar o ícone na barra de tarefas ao receber convites, verificações de prontidão e sussurros',
     description: 'Faz o ícone da barra de tarefas piscar (com som opcional) quando filas, verificações de pronto ou sussurros chegarem em segundo plano.',
     tag: 'Anti-Alt-Tab',
     options: {
@@ -82,7 +82,7 @@ export const systemPt: Record<string, ModuleTranslation> = {
     },
   },
   'talent-ready-check': {
-    title: 'Exibir configuração de talentos ao checar pronto',
+    title: 'Exibir a configuração de talentos na verificação de prontidão',
     description: 'Mostra no chat sua configuração de talentos ativa durante verificações de pronto para evitar entrar em raide com talentos errados.',
     details: 'Você pode listar nomes esperados (separados por vírgula) para alertar em vermelho e tocar alarme se não bater.',
     tag: 'Checagem Raide',
@@ -94,7 +94,7 @@ export const systemPt: Record<string, ModuleTranslation> = {
       playSound: { label: 'Tocar alarme se não corresponder' },
     },
     comments: {
-      header: '[ Exibir configuração de talentos ao checar pronto ]',
+      header: '[ Exibir a configuração de talentos na verificação de prontidão ]',
     },
     strings: {
       starterBuild: 'Configuração inicial',
@@ -123,7 +123,7 @@ export const systemPt: Record<string, ModuleTranslation> = {
   },
   'great-vault-reminder': {
     title: 'Lembrete de recompensa do Grande Cofre',
-    description: 'Avisa uma vez por entrada no chat (e opcionalmente no centro da tela) quando houver recompensas pendentes no Grande Cofre.',
+    description: 'Se houver recompensas pendentes no Grande Cofre, avisa uma vez no chat ao entrar no jogo ou recarregar a interface. O aviso também pode aparecer no centro da tela.',
     details: 'Alerta logo ao conectar em vez de apenas dentro da janela de Míticas+.',
     tag: 'Semanal',
     options: {

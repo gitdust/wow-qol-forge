@@ -39,16 +39,16 @@ export const lootingPt: Record<string, ModuleTranslation> = {
     },
   },
   'loot-spec-by-boss': {
-    title: 'Especialização de saque automática por chefe ou masmorra',
+    title: 'Especialização de saque automática por chefe ou instância',
     description:
-      'Troca automaticamente sua especialização de saque ao iniciar um encontro conforme suas regras (ex.: "Chefe=Gelo") e restaura a original depois.',
+      'Troca sua especialização de saque no início de um encontro com um chefe. Restaura a anterior quando nenhuma regra se aplica ou quando você sai da instância.',
     details:
-      'Aceita nome de chefe, instância ou ID de encontro. Use "atual" para acompanhar sua especialização ativa.',
+      'Aceita o nome do chefe, o nome da instância ou o ID do encontro. As regras de chefe têm prioridade. Use "atual" para acompanhar sua especialização ativa.',
     tag: 'Ajuda Raide',
     options: {
       rules: {
         label: 'Regras de troca',
-        description: 'Formato "ChefeOuInstância=Espec", separados por vírgula/ponto e vírgula, ex.: Chefe=Gelo',
+        description: 'Use "NomeDoChefeOuIDDoEncontro=Especialização" ou "NomeDaInstância=Especialização". Digite os nomes como aparecem no jogo e separe as regras por vírgulas ou pontos e vírgulas.',
       },
       announce: { label: 'Anunciar trocas no chat' },
     },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Cpu, FolderArchive, ExternalLink, Link2 } from 'lucide-react';
+import { LOCALE_LIST, localePath, setStoredLocale } from '../i18n';
 import { useI18n } from '../i18n/react';
 
 const DISASSEMBLED_ADDONS = [
@@ -20,7 +21,7 @@ const DISASSEMBLED_ADDONS = [
 ];
 
 export const Footer: React.FC = () => {
-  const { ui } = useI18n();
+  const { locale, ui } = useI18n();
 
   return (
     <footer className="mt-16 border-t border-slate-800/80 bg-[#090c12] py-12 px-4 sm:px-8 text-slate-400">
@@ -98,6 +99,22 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <nav aria-label={ui.nav.languageAria} className="flex flex-wrap gap-x-4 gap-y-2 text-xs">
+          {LOCALE_LIST.map((item) => (
+            <a
+              key={item.code}
+              href={localePath(item.code, import.meta.env.BASE_URL)}
+              hrefLang={item.hreflang}
+              lang={item.htmlLang}
+              aria-current={item.code === locale ? 'page' : undefined}
+              onClick={() => setStoredLocale(item.code)}
+              className="hover:text-amber-300 aria-[current=page]:text-amber-400"
+            >
+              {item.nativeName}
+            </a>
+          ))}
+        </nav>
 
         {/* Section 4: Copyright, Author & Friendly Links Footer Note */}
         <div className="pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">

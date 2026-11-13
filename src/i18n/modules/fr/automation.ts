@@ -103,7 +103,7 @@ export const automationFr: Record<string, ModuleTranslation> = {
   },
   'auto-release-pvp': {
     title: 'Libération d’esprit auto en CdB & JcJ ouvert',
-    description: 'Libère automatiquement votre esprit en champ de bataille et zones JcJ ouvertes (Joug-d’Hiver, Tol Barad, A’shran).',
+    description: 'Libère automatiquement votre esprit en champ de bataille et zones JcJ ouvertes (Joug-d’Hiver, Tol Barad, Ashran).',
     details: 'Ignoré si Pierre d’âme/Réincarnation disponible ; maintenez Maj pour annuler.',
     tag: 'Outil JcJ',
     options: {
@@ -114,7 +114,7 @@ export const automationFr: Record<string, ModuleTranslation> = {
     },
     comments: {
       header: '[ Libération d’esprit auto en CdB & JcJ ouvert (Leatrix Plus) ]',
-      worldPvpNote: 'IDs de cartes JcJ ouvert : Joug-d’Hiver, Tol Barad, A’shran, Bouclier-des-Tempêtes, Fer-de-Lance',
+      worldPvpNote: 'IDs de cartes JcJ ouvert : Joug-d’Hiver, Tol Barad, Ashran, Bouclier-des-Tempêtes, Fer-de-Lance',
       alteracNote: 'Vallée d’Alterac (classique & choc) excluable en option',
     },
     strings: {
@@ -175,13 +175,13 @@ export const automationFr: Record<string, ModuleTranslation> = {
     },
   },
   'auto-insert-keystone': {
-    title: 'Insertion automatique de clé Mythique+',
-    description: 'Insère automatiquement la clé Mythique+ correspondante depuis vos sacs à l’ouverture de la Fontaine de puissance.',
-    details: 'Ignoré en combat ou si une clé est déjà insérée.',
+    title: 'Insertion automatique de clé mythique',
+    description: 'Insère automatiquement la clé mythique correspondante depuis vos sacs à l’ouverture de la Fontaine de puissance.',
+    details: 'L’insertion est ignorée en combat ou si une clé est déjà en place.',
     tag: 'Mythique+',
     comments: {
-      header: '[ Insertion automatique de clé Mythique+ ]',
-      openDelayNote: 'Attendre une frame après ouverture pour actualiser affixes et icône',
+      header: '[ Insertion automatique de clé mythique ]',
+      openDelayNote: 'Attendre une frame après l’ouverture pour actualiser les affixes et l’icône',
       clearCursorNote: 'Vider le curseur en cas d’échec',
     },
   },
